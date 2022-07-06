@@ -1,0 +1,83 @@
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: rgba(89, 255, 114, 0.5);
+}
+.top-head {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    height: 100%;
+    background-color: rgba(89, 255, 114, 0.7);
+    padding: 10px 0 10px 20px;
+}
+
+.main, .search, .list {
+    background-color: white;
+    border: 1px solid rgba(25, 255, 60, 0.1);
+    border-radius: 10px;
+    margin: 20px 25% 20px 50px;
+}
+.container {
+    margin: 20px 30px;
+    padding: 10px 0;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+}
+.form-input {
+    padding: 2px;
+    border-radius: 6px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 6px;
+}
+#float-text {
+    display: inline-block;
+}
+p, .button {
+    margin: 10px 0 10px;
+}
+.button {
+    background-color: rgba(89, 255, 114, 0.4);
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    padding: 2px;
+    border-radius: 6px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgba(89, 255, 114, 0.7);
+}
+.button:onclick {
+    background-color: rgba(89, 255, 114, 0.4);
+}
+.container-book {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+#conditional, #delete {
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+}
+#conditional {
+    background-color: green;
+}
+#delete {
+    background-color: red;
+}
