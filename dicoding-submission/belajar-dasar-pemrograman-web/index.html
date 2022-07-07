@@ -7,25 +7,6 @@
         <link rel="stylesheet" href="assets/styles/style.css">
         <link rel="stylesheet" href="assets/styles/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script
-    		src="https://code.jquery.com/jquery-3.4.1.js"
-    		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    		crossorigin="anonymous"></script>
-    	<script>
-    		function SubForm (){
-    			$.ajax({
-    				url:"https://api.apispreadsheets.com/data/xOL3PyVQ08gWOzpx/",
-    				type:"post",
-    				data:$("#myForm").serializeArray(),
-    				success: function(){
-    					alert("Form Data Submitted :)")
-    				},
-    				error: function(){
-    					alert("There was an error :(")
-    				}
-    			});
-    		}
-    	</script>
     </head>
     <body>
         <header>
@@ -154,18 +135,27 @@
                     </article>
                 </div>
             </aside>
+            <script type="text/javascript">
+                
+            </script>
             <div class="box-bottom">
                 <div id="container">
                     <h2>Leave me comment below!</h2>
-                    <form class="" action="index.html" method="post" id="myForm">
-                        <label for="">Name </label>
-                        <input type="text" name="name" value="" placeholder="Isi namamu disini!" required>
-                        <label for="">Comment </label>
-                        <textarea name="comment" rows="8" cols="80" placeholder="Isi komentarmu disini!"></textarea>
-                        <input class="submit" type="submit" name="" value="Submit" onclick='SubForm()'>
+                    <form class="" action="index.html" method="POST">
+                        <label for="name">Name : </label>
+                        <input type="text" name="name" value="" placeholder="Isi namamu disini" required>
+
+                        <label for="comment">Comment : </label>
+                        <textarea name="comment" rows="8" cols="80" value="" placeholder="Isi komentarmu disini!" required></textarea>
+
+                        <button type="submit" name="button" class="btn-submit">Submit</button>
                     </form>
                 </div>
             </div>
+            <!-- Bibliography Website
+            https://www.linkedin.com/business/talent/blog/talent-strategy/most-in-demand-jobs (in article-00)
+
+            -->
         </main>
         <footer>
             <p>Belajar Dasar Pemrograman Web &#169; 2022, Dicoding Academy</p>

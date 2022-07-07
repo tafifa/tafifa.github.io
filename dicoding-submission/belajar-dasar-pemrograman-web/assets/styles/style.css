@@ -89,13 +89,13 @@ section {
 .socmed li{
     list-style: none;
 }
-.submit {
+.btn-submit {
     padding: 5px 10px;
     background-color: #14a5e0;
     border-style: none;
     color: white;
 }
-.submit:hover {
+.btn-submit:hover {
     opacity: 0.7;
     color: black;
     cursor: pointer;
@@ -122,6 +122,12 @@ section {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+label p {
+    float: left;
+}
+input, textarea {
+    display: block;
 }
 textarea {
     width: 100%;
