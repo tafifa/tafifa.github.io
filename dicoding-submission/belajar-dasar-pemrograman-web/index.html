@@ -122,12 +122,12 @@
                                 <tr>
                                     <th>Asal Daerah</th>
                                     <td> : </td>
-                                    <td>Pontianak</td>
+                                    <td>Pontianak, Kalimantan Barat</td>
                                 </tr>
                                 <tr>
                                     <th>Hobi</th>
                                     <td> : </td>
-                                    <td>Bermain Rubik</td>
+                                    <td>Bermain Rubik, Ngoding</td>
                                 </tr>
                             </table>
                         </section>
@@ -153,13 +153,14 @@
                     <h2>Leave me comment and rating below!</h2>
                     <form class="" action="index.html">
                         <label for="name">Name : </label>
-                        <input type="text" name="name" value="" placeholder="Isi namamu disini" required>
+                        <input id="name" type="text" name="name" value="" placeholder="Isi namamu disini" required>
 
                         <label for="comment">Comment : </label>
-                        <textarea name="comment" rows="8" cols="80" value="" placeholder="Isi komentarmu disini!" required></textarea>
+                        <textarea id="comment" name="comment" rows="8" cols="80" value="" placeholder="Isi komentarmu disini!" required></textarea>
 
                         <label for="rating">Rate my website : </label>
-                        <input type="range" name="" value="" min="0" max="5">
+                        <input type="range" name="rating" id="range" min="0" max="5" onchange="getRangeValue(this.value);">
+                        <p>Value: <span id="rangeValue">-</span></p>
 
                         <button type="button" name="button" class="btn-submit">Submit</button>
                     </form>
@@ -173,11 +174,21 @@
             <p>Belajar Dasar Pemrograman Web &#169; 2022, Dicoding Academy</p>
         </footer>
     </body>
+    <!-- script -->
+    <script type="text/javascript">
+        var valueRange = document.getElementById("rangeValue");
+
+        function getRangeValue(val) {
+            valueRange.innerHTML = val;
+        }
+    </script>
+
     <script type="text/javascript">
         var submitForm = document.getElementsByClassName("btn-submit")[0];
         submitForm.addEventListener("click", function (event) {
             alert("Terima kasih atas komentarnya!")
         })
+
     </script>
     <script type="text/javascript">
         function dropdown() {
