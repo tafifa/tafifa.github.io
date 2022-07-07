@@ -136,7 +136,11 @@
                 </div>
             </aside>
             <script type="text/javascript">
-
+                var submitForm = document.getElementsByTagName("button")[0];
+                submitForm.addEventListener("click", function (event) {
+                    alert("Terima kasih atas komentarnya!");
+                }
+            )
             </script>
             <div class="box-bottom">
                 <div id="container">
@@ -148,7 +152,7 @@
                         <label for="comment">Comment : </label>
                         <textarea name="comment" rows="8" cols="80" value="" placeholder="Isi komentarmu disini!" required></textarea>
 
-                        <button type="submit" name="button" class="btn-submit">Submit</button>
+                        <button type="button" name="button" class="btn-submit">Submit</button>
                     </form>
                 </div>
             </div>
