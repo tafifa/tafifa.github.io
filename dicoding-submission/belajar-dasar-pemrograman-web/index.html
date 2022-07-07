@@ -6,7 +6,7 @@
         <title>Yuk Masuk Informatika | Submission Dicoding - Belajar Dasar Pemrograman Dasar Web</title>
         <link rel="stylesheet" href="assets/styles/style.css">
         <link rel="stylesheet" href="assets/styles/responsive.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     </head>
     <body>
         <header>
@@ -14,12 +14,24 @@
                 <h1>Yuk Masuk <br>Informatika!</h1>
             </div>
             <nav>
-                <ul>
-                    <li> <a href="#content-01">Apa itu Program Studi Informatika</a> </li>
-                    <li> <a href="#content-02">Apa yang dipelajari di informatika</a> </li>
-                    <li> <a href="#content-03">Pekerjaan lulusan Informatika</a> </li>
-                    <li> <a href="#content-04">Kesimpulan</a> </li>
-                </ul>
+                <div class="nav-container">
+                    <button type="button" name="button" id="btn-dropdown"  onclick="dropdown()"><span class="fa-solid fa-bars"></span> Menu</button>
+                    <ul id="ul-normal">
+                        <li> <a href="#content-01">Apa itu Program Studi Informatika</a> </li>
+                        <li> <a href="#content-02">Apa yang dipelajari di informatika</a> </li>
+                        <li> <a href="#content-03">Pekerjaan lulusan Informatika</a> </li>
+                        <li> <a href="#content-04">Kesimpulan</a> </li>
+                    </ul>
+                    <ul id="ul-dropdown">
+                        <h2>Daftar Isi</h2>
+                        <li> <a href="#content-01">Apa itu Program Studi Informatika</a> </li>
+                        <li> <a href="#content-02">Apa yang dipelajari di informatika</a> </li>
+                        <li> <a href="#content-03">Pekerjaan lulusan Informatika</a> </li>
+                        <li> <a href="#content-04">Kesimpulan</a> </li>
+                        <li> <a href="#profile">Profil</a> </li>
+                        <li> <a href="#comment">Comment</a> </li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <main>
@@ -82,7 +94,7 @@
                 </div>
 
             </div>
-            <aside class="box-right">
+            <aside class="box-right" id="profile">
                 <div id="container">
                     <div id="aside-title">
                         <h2>Author Profile</h2>
@@ -125,10 +137,10 @@
                         <section class="profile socmed">
                             <p>Follow my Social Media!</p>
                             <ul>
-                                <li><a href="https://instagram.com/tafif_a/" class="fa fa-instagram"> <span class="item-label">Instagram</span></a></li>
-                                <li><a href="https://twitter.com/tafif_a/" class="fa fa-twitter"> <span class="item-label">Twitter</span></a></li>
-                                <li><a href="https://github.com/tafifa/" class="fa fa-github"> <span class="item-label">Github</span></a></li>
-                                <li><a href="https://www.linkedin.com/in/tafifa/" class="fa fa-linkedin"> <span class="item-label">Linkedin</span></a></li>
+                                <li><a href="https://instagram.com/tafif_a/"><span class="fa fa-brands fa-instagram"></span> <span class="item-label">Instagram</span></a></li>
+                                <li><a href="https://twitter.com/tafif_a/"><span class="fa fa-brands fa-twitter"></span> <span class="item-label">Twitter</span></a></li>
+                                <li><a href="https://github.com/tafifa/"><span class="fa fa-brands fa-github"></span> <span class="item-label">Github</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/tafifa/"><span class="fa fa-brands fa-linkedin"></span> <span class="item-label">Linkedin</span></a></li>
                             </ul>
                             <div class="clear"></div>
                         </section>
@@ -136,15 +148,18 @@
                 </div>
             </aside>
 
-            <div class="box-bottom">
+            <div class="box-bottom" id="comment">
                 <div id="container">
-                    <h2>Leave me comment below!</h2>
+                    <h2>Leave me comment and rating below!</h2>
                     <form class="" action="index.html">
                         <label for="name">Name : </label>
                         <input type="text" name="name" value="" placeholder="Isi namamu disini" required>
 
                         <label for="comment">Comment : </label>
                         <textarea name="comment" rows="8" cols="80" value="" placeholder="Isi komentarmu disini!" required></textarea>
+
+                        <label for="rating">Rate my website : </label>
+                        <input type="range" name="" value="" min="0" max="5">
 
                         <button type="button" name="button" class="btn-submit">Submit</button>
                     </form>
@@ -159,9 +174,19 @@
         </footer>
     </body>
     <script type="text/javascript">
-        var pressedButton = document.getElementsByTagName("button")[0];
-        pressedButton.addEventListener("click", function (event) {
+        var submitForm = document.getElementsByClassName("btn-submit")[0];
+        submitForm.addEventListener("click", function (event) {
             alert("Terima kasih atas komentarnya!")
         })
+    </script>
+    <script type="text/javascript">
+        function dropdown() {
+            var x = document.getElementById("ul-dropdown");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
     </script>
 </html>

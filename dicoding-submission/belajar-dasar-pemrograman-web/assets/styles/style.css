@@ -27,27 +27,7 @@ header {
     text-align: center;
     color: white;
 }
-nav {
-    text-align: center;
-    padding: 15px 0 10px 0;
-    background-image: linear-gradient(to bottom, rgba(255,0,0,0), #055170);
-}
-nav li {
-    display: inline;
-    list-style: none;
-    padding-left : 10px;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 3px 5px;
-}
-nav a:hover {
-    background-color: rgba(77, 76, 76, 0.3);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    color: grey;
-}
+
 
 /* This is styles for main */
 main {
@@ -83,8 +63,11 @@ article p {
 aside {
 
 }
-section {
-    padding-bottom: 30px;
+.profile {
+    padding-bottom: 35px;
+}
+ol {
+    padding-left: 35px;
 }
 .socmed li{
     list-style: none;
@@ -150,6 +133,9 @@ footer p {
 .socmed li {
     float: left;
     padding: 5px 5px 0 0;
+}
+.checked {
+  color: orange;
 }
 .fa {
     padding: 5px;

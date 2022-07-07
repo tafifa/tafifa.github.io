@@ -19,6 +19,85 @@
     .fa {
         padding: 10px;
     }
+}
+
+@media (max-width: 903px) {
+    .nav-container {
+        width: auto;
+        height: auto;
+        background-image: linear-gradient(to bottom, rgba(255,0,0,0), #055170);
+    }
+    #btn-dropdown {
+        text-align: left;
+        width: 100%;
+        height: auto;
+        padding: 15px 25px;
+        background-color: rgba(255,255,255,0.3);
+        border-style: none;
+        color: white;
+    }
+    #btn-dropdown:hover {
+        background-color: rgb(15, 124, 168);
+        border-color: grey;
+    }
+    #btn-dropdown span {
+        padding-right: 10px;
+    }
+    #ul-normal {
+        display: none;
+    }
+    #ul-dropdown {
+        width: auto;
+        height: auto;
+        background-color: rgba(255,255,255,0.3);
+        display: none;
+    }
+    #ul-dropdown h2 {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+    #ul-dropdown a {
+        color: white;
+        text-decoration: none;
+        padding-left: 35px;
+    }
+    #ul-dropdown li {
+        padding: 10px 0;
+    }
+    #ul-dropdown li:hover {
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 3px;
+        color: grey;
+    }
+}
+@media (min-width: 903px) {
+    #btn-dropdown, #ul-dropdown {
+        display: none;
+    }
+    nav {
+        text-align: center;
+        padding: 15px 0 10px 0;
+        background-image: linear-gradient(to bottom, rgba(255,0,0,0), #055170);
+    }
+    nav li {
+        display: inline;
+        list-style: none;
+        padding-left : 0 5px;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 3px 5px;
+    }
+    nav a:hover {
+        background-color: rgba(77, 76, 76, 0.3);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        color: grey;
+    }
+
+
  /* tablet, landscape iPad, lo-res laptops ands desktops */ }
 @media (max-width:1024px) {
     .header, .table {
@@ -36,7 +115,7 @@
         justify-content: center;
     }
 }
-@media (min-width:1025px) {
+@media (min-width:1024px) {
     .box-left {
         float: left;
         width: 75%;
