@@ -135,13 +135,7 @@
                     </article>
                 </div>
             </aside>
-            <script type="text/javascript">
-                var submitForm = document.getElementsByTagName("button")[0];
-                submitForm.addEventListener("click", function (event) {
-                    alert("Terima kasih atas komentarnya!");
-                }
-            )
-            </script>
+
             <div class="box-bottom">
                 <div id="container">
                     <h2>Leave me comment below!</h2>
@@ -158,11 +152,16 @@
             </div>
             <!-- Bibliography Website
             https://www.linkedin.com/business/talent/blog/talent-strategy/most-in-demand-jobs (in article-00)
-
             -->
         </main>
         <footer>
             <p>Belajar Dasar Pemrograman Web &#169; 2022, Dicoding Academy</p>
         </footer>
     </body>
+    <script type="text/javascript">
+        var pressedButton = document.getElementsByTagName("button")[0];
+        pressedButton.addEventListener("click", function (event) {
+            alert("Terima kasih atas komentarnya!")
+        })
+    </script>
 </html>
