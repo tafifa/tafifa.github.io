@@ -8,24 +8,24 @@
         <link rel="stylesheet" href="assets/styles/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script
-		src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
-	<script>
-		function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/xOL3PyVQ08gWOzpx/",
-				type:"post",
-				data:$("#myForm").serializeArray(),
-				success: function(){
-					alert("Form Data Submitted :)")
-				},
-				error: function(){
-					alert("There was an error :(")
-				}
-			});
-		}
-	</script>
+    		src="https://code.jquery.com/jquery-3.4.1.js"
+    		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    		crossorigin="anonymous"></script>
+    	<script>
+    		function SubForm (){
+    			$.ajax({
+    				url:"https://api.apispreadsheets.com/data/xOL3PyVQ08gWOzpx/",
+    				type:"post",
+    				data:$("#myForm").serializeArray(),
+    				success: function(){
+    					alert("Form Data Submitted :)")
+    				},
+    				error: function(){
+    					alert("There was an error :(")
+    				}
+    			});
+    		}
+    	</script>
     </head>
     <body>
         <header>
