@@ -127,6 +127,13 @@ aside {
     border: 1px solid black;
     padding: 0 5px;
 }
+.star-rating li {
+    float: left;
+    list-style: none;
+}
+.star-rating li:hover {
+    color: orange;
+}
 .btn-submit {
     padding: 5px 10px;
     background-color: #14a5e0;
