@@ -22,10 +22,18 @@ header {
     width: 100%;
     height: auto;
 }
+#header-title {
+    padding-bottom: 35px;
+}
 #header-title h1 {
     font-size: 60px;
+}
+#header-title h1, #header-title p {
     text-align: center;
     color: white;
+}
+#header-title span {
+    color: red;
 }
 
 
@@ -43,6 +51,9 @@ main {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+main h3 {
+    padding-top: 5px;
 }
 .clear {
     clear: left;
@@ -97,6 +108,25 @@ aside {
     float: left;
     padding: 5px 5px 0 0;
 }
+#form h2 {
+    margin-bottom: 10px;
+}
+#form input, #form textarea {
+    margin-bottom: 15px;
+}
+.range {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.range input {
+    margin: 0 10px;
+}
+.range span {
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 0 5px;
+}
 .btn-submit {
     padding: 5px 10px;
     background-color: #14a5e0;
@@ -135,6 +165,10 @@ textarea {
 }
 .fa-twitter {
     background: #55ACEE;
+    color: white;
+}
+.fa-youtube {
+    background: #FF0000;
     color: white;
 }
 .fa-github {

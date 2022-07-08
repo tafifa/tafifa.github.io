@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>Yuk Masuk Informatika | Submission Dicoding - Belajar Dasar Pemrograman Dasar Web</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>Yuk Masuk Informatika! | Submission Dicoding - Belajar Dasar Pemrograman Dasar Web</title>
         <link rel="stylesheet" href="assets/styles/style.css">
         <link rel="stylesheet" href="assets/styles/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -12,6 +12,7 @@
         <header>
             <div id="header-title">
                 <h1>Yuk Masuk <br>Informatika!</h1>
+                <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ tafifa.github.io</em>  </p>
             </div>
             <nav>
                 <div class="nav-container">
@@ -38,7 +39,7 @@
             <div class="box-left">
                 <div id="container">
                     <article id="content-00">
-                        <h2>Preface</h2>
+                        <h2>Abstrak</h2>
                         <p>Informatika menjadi program studi paling tren beberapa dekade terakhir, menjadikan salah satu program studi dengan persaingan terketat selaras dengan program studi kedokteran dan kesehatan. Hal ini terjadi karena makin berkembangnya era teknologi dan informasi yang membuat kebutuhan akan demand tenaga IT pun makin pesat. Melansir dari blog <a href="https://www.linkedin.com/business/talent/blog/talent-strategy/most-in-demand-jobs">Linkedin.com</a>, 10 pekerjaan dengan angka kebutuhan tertinggi pada Q1 2022 (Januari-Maret) terdapat 5 dari 10 pekerjaan yang berhubungan dengan IT, diantaranya yaitu Software Engineer, JavaScript Developer, Java Software Engineer, DevOps Engineer, dan Full Stack Engineer. Beberapa calon mahasiswa yang melihat kesempatan emas ini tentunya tidak akan membuang sia-sia untuk mendapatkan pekerjaan yang sangat bergengsi ini ditambah lagi dengan range pendapatan yang sangat tinggi. </p>
                     </article>
                     <article id="content-01">
@@ -139,8 +140,9 @@
                             <ul>
                                 <li><a href="https://instagram.com/tafif_a/"><span class="fa fa-brands fa-instagram"></span> <span class="item-label">Instagram</span></a></li>
                                 <li><a href="https://twitter.com/tafif_a/"><span class="fa fa-brands fa-twitter"></span> <span class="item-label">Twitter</span></a></li>
+                                <li><a href="https://youtube.com/channel/UC88FivgRkMvHQVG7RfXYy_w"><span class="fa fa-brands fa-youtube"></span> <span class="item-label">Youtube</span></a></li>
                                 <li><a href="https://github.com/tafifa/"><span class="fa fa-brands fa-github"></span> <span class="item-label">Github</span></a></li>
-                                <li><a href="https://www.linkedin.com/in/tafifa/"><span class="fa fa-brands fa-linkedin"></span> <span class="item-label">Linkedin</span></a></li>
+                                <li><a href="https://linkedin.com/in/tafifa/"><span class="fa fa-brands fa-linkedin"></span> <span class="item-label">Linkedin</span></a></li>
                             </ul>
                             <div class="clear"></div>
                         </section>
@@ -148,19 +150,21 @@
                 </div>
             </aside>
 
-            <div class="box-bottom" id="comment">
+            <div class="box-bottom" id="form">
                 <div id="container">
                     <h2>Leave me comment and rating below!</h2>
                     <form class="" action="index.html">
                         <label for="name">Name : </label>
-                        <input id="name" type="text" name="name" value="" placeholder="Isi namamu disini" required>
+                        <input id="name" type="text" name="name" value="" placeholder="Isi namamu disini!" required>
 
                         <label for="comment">Comment : </label>
                         <textarea id="comment" name="comment" rows="8" cols="80" value="" placeholder="Isi komentarmu disini!" required></textarea>
 
-                        <label for="rating">Rate my website : </label>
-                        <input type="range" name="rating" id="range" min="0" max="5" onchange="getRangeValue(this.value);">
-                        <p>Value: <span id="rangeValue">-</span></p>
+                        <div class="range">
+                            <label for="rating">Rate my website : </label>
+                            <input type="range" name="rating" id="range" min="0" max="5" onchange="getRangeValue(this.value);">
+                            <p> <span id="rangeValue">-</span></p>
+                        </div>
 
                         <button type="button" name="button" class="btn-submit">Submit</button>
                     </form>
