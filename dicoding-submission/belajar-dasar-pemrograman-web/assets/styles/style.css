@@ -52,27 +52,21 @@ main {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-main h3 {
-    padding-top: 5px;
-}
 .clear {
     clear: left;
 }
-article {
-    padding-bottom: 35px;
+article, article h3, article img {
+    margin-bottom: 15px;
 }
 article h2, #aside-title h2 {
-    padding-bottom: 10px;
-    font-weight: 700;
-}
-article img {
     padding-bottom: 15px;
-}
-article p {
-
+    font-weight: 700;
 }
 ol {
     padding-left: 35px;
+}
+.paragraph {
+    margin-bottom: 10px;
 }
 aside {
 
