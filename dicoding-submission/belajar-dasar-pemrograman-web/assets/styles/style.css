@@ -71,6 +71,9 @@ ol {
 aside {
 
 }
+main p {
+    line-height: 1.35em;
+}
 #aside-title h2 {
     text-align: center;
 }
