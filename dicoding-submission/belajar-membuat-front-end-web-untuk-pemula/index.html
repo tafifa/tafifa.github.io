@@ -1,78 +1,113 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta charset="utf-8">
-        <title>Bookshelf Apps</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BookShelf Webpage</title>
         <link rel="stylesheet" href="assets/styles/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/styles/responsive.css">
     </head>
     <body>
-        <div class="top-head">
-            <h1>Bookshelf Apps</h1>
-        </div>
-        <div class="main">
-            <div class="container">
-                <h2>Masukkan buku baru</h2>
-                <p>Judul Buku</p>
-                <input class="form-input" id="book title" type="text" name="title-book" value="" required>
-                <p>Penulis</p>
-                <input class="form-input" id="book writer" type="text" name="writer-book" value="" required>
-                <p>Tahun Terbit</p>
-                <input class="form-input" id="book year" type="number" name="year-book" value="" required>
-                <p id="float-text">Selesai dibaca</p>
-                <input type="checkbox" name="" value="">
-                <br>
-                <button class="button" id="book add" type="button" name="button">Masukkan buku ke rak Belum Selesai Dibaca</button>
+        <header>
+            <h1>Open-Source Library</h1>
+            <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ tafifa.github.io  </p>
+        </header>
+        <main>
+            <div class="box-left">
+                <div id="book-insert">
+                    <div id="container">
+                        <h2>Masukkan buku baru</h2>
+                        <form class="form-input" action="index.html" method="post">
+                            <label class="input" for="book-name">Judul Buku: </label>
+                            <input type="text" name="book-name" value="">
+
+                            <label class="input" for="book-author">Penulis Buku: </label>
+                            <input type="text" name="book-author" value="">
+
+                            <label class="input" for="book-year">Tahun Terbitan: </label>
+                            <input type="number" name="book-year" value="">
+
+                            <button type="button" class="add-option01" name="button">Masukkan ke rak sudah selesai dibaca</button>
+                            <button type="button" class="add-option02" name="button">Masukkan ke rak belum selesai dibaca</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="book-search">
+                    <div id="container">
+                        <h2>Cari Buku</h2>
+                        <form class="form-search" action="index.html" method="post">
+                            <label for="radio-option">Cari berdasarkan apa?</label>
+                            <ul name="radio-option">
+                                <li><input type="radio" name="" value=""> Judul Buku</li>
+                                <li><input type="radio" name="" value=""> Penulis Buku</li>
+                                <li><input type="radio" name="" value=""> Tahun Terbitan</li>
+                            </ul>
+
+                            <label for="">Isi data berikut: </label>
+                            <input class="search search-box00" type="text" name="for-name" value="">
+                            <input class="search search-box01" type="text" name="for-author" value="">
+                            <input class="search search-box02" type="number" name="for-year" value="">
+
+                            <button type="button" name="button">Search</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="search">
-            <div class="container">
-                <h2>Cari buku</h2>
-                <p>Judul Buku</p>
-                <input class="form-input" id="book title" type="text" name="title-book" value="" required>
-                <br>
-                <button class="button" id="book search" type="button" name="button">Cari</button>
-            </div>
-        </div>
-        <div class="list">
-            <div class="list-sudah">
-                <div class="container">
-                    <h2>Belum selesai dibaca</h2>
-                    <div class="container-book">
-                        <div class="book-sudah">
-                            <h3>"judul buku"</h3>
-                            <p>Penulis: "nama penulis"</p>
-                            <p>Tahun: "tahun"</p>
-                            <button id="conditional" type="button" name="button">Belum Selesai dibaca</button>
-                            <button id="delete" type="button" name="button">Hapus Buku</button>
+            <div class="box-right">
+                <div id="container">
+                    <div id="bookshelf-readed">
+                        <h2>Rak Buku Sudah Dibaca</h2>
+                        <div class="readed-book00">
+
+                            <div id="container-book">
+                                <h3>'Judul Buku'</h3>
+                                <p>Penulis: 'nama penulis buku'</p>
+                                <p>Tahun Terbit: 'tahun terbit buku'</p>
+
+                                <input type="button" class="move" name="" value="Belum Selesai Dibaca">
+                                <input type="button" class="delete" name="" value="Hapus Buku">
+                            </div>
+                        </div>
+                        <div class="readed-book01">
+                            <div id="container-book">
+                                <h3>'Judul Buku'</h3>
+                                <p>Penulis: 'nama penulis buku'</p>
+                                <p>Tahun Terbit: 'tahun terbit buku'</p>
+
+                                <input type="button" class="move" name="" value="Belum Selesai Dibaca">
+                                <input type="button" class="delete" name="" value="Hapus Buku">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bookshelf-not-readed">
+                        <h2>Rak Buku Belum Dibaca</h2>
+                        <div class="not-readed-book00">
+                            <div id="container-book">
+                                <h3>'Judul Buku'</h3>
+                                <p>Penulis: 'nama penulis buku'</p>
+                                <p>Tahun Terbit: 'tahun terbit buku'</p>
+
+                                <input type="button" class="move"  name="" value="Sudah Selesai Dibaca">
+                                <input type="button" class="delete" name="" value="Hapus Buku">
+                            </div>
+                        </div>
+                        <div class="not-readed-book01">
+                            <div id="container-book">
+                                <h3>'Judul Buku'</h3>
+                                <p>Penulis: 'nama penulis buku'</p>
+                                <p>Tahun Terbit: 'tahun terbit buku'</p>
+
+                                <input type="button" class="move"  name="" value="Sudah Selesai Dibaca">
+                                <input type="button" class="delete" name="" value="Hapus Buku">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="list-belum">
-                <div class="container">
-                    <h2>Sudah selesai dibaca</h2>
-                    <div class="container-book">
-                        <div class="book-belum">
-                            <h3>"judul buku"</h3>
-                            <p>Penulis: "nama penulis"</p>
-                            <p>Tahun: "tahun"</p>
-                            <button id="conditional" type="button" name="button">Selesai dibaca</button>
-                            <button id="delete" type="button" name="button">Hapus Buku</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
-            const buku = {
-                judulBuku = document.getElementById('book title'),
-                penulisBuku = document.getElementById('book writer'),
-                tahunTerbit = document.getElementById('book year'),
-            };
-        </script>
+            <div class="clear"></div>
+        </main>
+        <footer>
+            <p>Belajar Membuat Front-End Web Untuk Pemula &#169; 2022, Dicoding Academy</p>
+        </footer>
     </body>
 </html>
