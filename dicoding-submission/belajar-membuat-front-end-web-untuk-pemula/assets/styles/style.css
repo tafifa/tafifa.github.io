@@ -86,6 +86,7 @@ button, input {
 .form-search li {
     list-style: none;
     display: inline;
+    padding-right: 15px;
 }
 .search-box01, .search-box02 {
     display: none;
