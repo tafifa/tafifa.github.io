@@ -54,9 +54,12 @@ button, input {
 }
 .form-input button {
     padding: 5px;
-    margin: 10px 0;
+    margin-bottom: 5px;
     color: white;
     border-radius: 5px;
+}
+.btn-option {
+    margin: 10px 0;
 }
 .box-left button:hover {
     opacity: 0.7;
@@ -86,8 +89,8 @@ button, input {
     width: 50%;
     background-color: #cccccc;
 }
-.search-author, .search-year {
-    display: none;
+.search-bar {
+    margin: 10px 0;
 }
 
 

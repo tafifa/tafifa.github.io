@@ -1,3 +1,8 @@
+@media (max-width:480px)  {
+    .search {
+        display: block;
+    }
+}
 @media (max-width:1024px) {
     header, main {
         max-width: 700px;

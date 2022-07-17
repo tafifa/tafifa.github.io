@@ -27,8 +27,10 @@
                             <label class="input" for="book-year">Tahun Terbitan: </label>
                             <input type="number" name="book-year" value="">
 
-                            <button type="button" class="add-option01" name="button">Masukkan ke rak sudah selesai dibaca</button>
-                            <button type="button" class="add-option02" name="button">Masukkan ke rak belum selesai dibaca</button>
+                            <div class="btn-option">
+                                <button type="button" class="add-option01" name="button">Masukkan ke rak sudah selesai dibaca</button>
+                                <button type="button" class="add-option02" name="button">Masukkan ke rak belum selesai dibaca</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -43,12 +45,12 @@
                                 <option value="search-year">Tahun Terbitan</option>
                             </select><br>
 
-                            <label for="">Isi data berikut: </label>
-                            <input class="search search-name" type="text" name="for-name" value="">
-                            <input class="search search-author" type="text" name="for-author" value="">
-                            <input class="search search-year" type="number" name="for-year" value="">
+                            <div class="search-bar">
+                                <label for="">Isi data berikut: </label>
+                                <input class="search" type="text" name="for-name" value="">
 
-                            <button type="button" name="button">Search</button>
+                                <button type="button" name="button">Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
