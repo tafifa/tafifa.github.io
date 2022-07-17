@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            <h1>Open-Source Library</h1>
+            <h1>My Book Collection</h1>
             <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ tafifa.github.io  </p>
         </header>
         <main>
@@ -37,16 +37,16 @@
                         <h2>Cari Buku</h2>
                         <form class="form-search" action="index.html" method="post">
                             <label for="radio-option">Cari berdasarkan apa?</label>
-                            <ul name="radio-option">
-                                <li><input type="radio" name="" value=""> Judul Buku</li>
-                                <li><input type="radio" name="" value=""> Penulis Buku</li>
-                                <li><input type="radio" name="" value=""> Tahun Terbitan</li>
-                            </ul>
+                            <select class="search-option" name="">
+                                <option value="search-name">Judul Buku</option>
+                                <option value="search-author">Penulis Buku</option>
+                                <option value="search-year">Tahun Terbitan</option>
+                            </select><br>
 
                             <label for="">Isi data berikut: </label>
-                            <input class="search search-box00" type="text" name="for-name" value="">
-                            <input class="search search-box01" type="text" name="for-author" value="">
-                            <input class="search search-box02" type="number" name="for-year" value="">
+                            <input class="search search-name" type="text" name="for-name" value="">
+                            <input class="search search-author" type="text" name="for-author" value="">
+                            <input class="search search-year" type="number" name="for-year" value="">
 
                             <button type="button" name="button">Search</button>
                         </form>
@@ -57,8 +57,8 @@
                 <div id="container">
                     <div id="bookshelf-readed">
                         <h2>Rak Buku Sudah Dibaca</h2>
-                        <div class="readed-book00">
-
+                        <!--
+                        <div class="readed book00">
                             <div id="container-book">
                                 <h3>'Judul Buku'</h3>
                                 <p>Penulis: 'nama penulis buku'</p>
@@ -68,20 +68,24 @@
                                 <input type="button" class="delete" name="" value="Hapus Buku">
                             </div>
                         </div>
-                        <div class="readed-book01">
+                        -->
+                        <!---->
+                        <div class="readed book-testing">
                             <div id="container-book">
-                                <h3>'Judul Buku'</h3>
-                                <p>Penulis: 'nama penulis buku'</p>
-                                <p>Tahun Terbit: 'tahun terbit buku'</p>
+                                <h3>Subtle Art of Not Giving a F*ck!</h3>
+                                <p>Penulis: Mark Manson</p>
+                                <p>Tahun Terbit: 2016</p>
 
                                 <input type="button" class="move add-option02" name="" value="Belum Selesai Dibaca">
                                 <input type="button" class="delete" name="" value="Hapus Buku">
                             </div>
                         </div>
+                        <!---->
                     </div>
                     <div id="bookshelf-not-readed">
                         <h2>Rak Buku Belum Dibaca</h2>
-                        <div class="not-readed-book00">
+                        <!--
+                        <div class="not-readed book00">
                             <div id="container-book">
                                 <h3>'Judul Buku'</h3>
                                 <p>Penulis: 'nama penulis buku'</p>
@@ -91,16 +95,19 @@
                                 <input type="button" class="delete" name="" value="Hapus Buku">
                             </div>
                         </div>
-                        <div class="not-readed-book01">
+                        -->
+                        <!---->
+                        <div class="not-readed book-testing">
                             <div id="container-book">
-                                <h3>'Judul Buku'</h3>
-                                <p>Penulis: 'nama penulis buku'</p>
-                                <p>Tahun Terbit: 'tahun terbit buku'</p>
+                                <h3>Outliers</h3>
+                                <p>Penulis: Malcom Gladwell</p>
+                                <p>Tahun Terbit: 2008</p>
 
                                 <input type="button" class="move add-option01"  name="" value="Sudah Selesai Dibaca">
                                 <input type="button" class="delete" name="" value="Hapus Buku">
                             </div>
                         </div>
+                        <!---->
                     </div>
                 </div>
             </div>

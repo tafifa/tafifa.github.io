@@ -20,6 +20,9 @@ header {
     height: auto;
     padding-bottom: 15px;
 }
+header p {
+    text-indent: 30px;
+}
 
 /* This is styles for main*/
 main {
@@ -83,12 +86,7 @@ button, input {
     width: 50%;
     background-color: #cccccc;
 }
-.form-search li {
-    list-style: none;
-    display: inline;
-    padding-right: 15px;
-}
-.search-box01, .search-box02 {
+.search-author, .search-year {
     display: none;
 }
 
