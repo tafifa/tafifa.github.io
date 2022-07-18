@@ -7,12 +7,17 @@
         <link rel="stylesheet" href="assets/styles/style.css">
         <link rel="stylesheet" href="assets/styles/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script
+    		src="https://code.jquery.com/jquery-3.4.1.js"
+    		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    		crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <header>
             <div id="header-title">
                 <h1>Yuk Masuk <br>Informatika!</h1>
-                <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ tafifa.github.io</em>  </p>
+                <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ tafifa.github.io  </p>
             </div>
             <nav>
                 <div class="nav-container">
@@ -101,6 +106,7 @@
                                 <li>Universitas Gunadarma (Teknik Informatika)</li>
                                 <li>Universitas Hasanudin (Teknik Informatika)</li>
                                 <li>Universitas Negeri Sebelas Maret (Informatika)</li>
+                                <li>Universitas Tanjungpura (Informatika)</li>
                             </ol>
                         </div>
                     </article>
@@ -236,25 +242,11 @@
                             <input type="range" name="rating" id="range" min="0" max="5" onchange="getRangeValue(this.value);">
                             <p> <span id="rangeValue">-</span></p>
                         </div>
-                        <!--
-                        <div class="star-rating">
-                            <ul>
-                                <li><span class="fa fa-star str-1"></span></li>
-                                <li><span class="fa fa-star str-2"></span></li>
-                                <li><span class="fa fa-star str-3"></span></li>
-                                <li><span class="fa fa-star str-4"></span></li>
-                                <li><span class="fa fa-star str-5"></span></li>
-                            </ul>
-                        </div>
-                        -->
 
-                        <button type="button" name="button" class="btn-submit">Submit</button>
+                        <button type="button" name="button" class="btn-submit" onclick='SubForm()'>Submit</button>
                     </form>
                 </div>
             </div>
-            <!-- Bibliography Website
-            https://www.linkedin.com/business/talent/blog/talent-strategy/most-in-demand-jobs (in article-00)
-            -->
         </main>
         <footer>
             <p>Belajar Dasar Pemrograman Web &#169; 2022, Dicoding Academy</p>
@@ -267,16 +259,12 @@
         function getRangeValue(val) {
             valueRange.innerHTML = val;
         }
-    </script>
 
-    <script type="text/javascript">
         var submitForm = document.getElementsByClassName("btn-submit")[0];
         submitForm.addEventListener("click", function (event) {
             alert("Terima kasih atas komentarnya!")
         })
 
-    </script>
-    <script type="text/javascript">
         function dropdown() {
             var x = document.getElementById("ul-dropdown");
             if (x.style.display === "none") {
@@ -284,6 +272,20 @@
             } else {
                 x.style.display = "none";
             }
+        }
+
+        function SubForm (){
+            $.ajax({
+                url:"https://api.apispreadsheets.com/data/xOL3PyVQ08gWOzpx/",
+                type:"post",
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                    alert("Form Data Submitted :)")
+                },
+                error: function(){
+                    alert("There was an error :(")
+                }
+            });
         }
     </script>
 </html>

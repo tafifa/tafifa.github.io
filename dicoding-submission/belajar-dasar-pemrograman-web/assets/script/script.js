@@ -1,9 +1,22 @@
-// api spreadsheets link: https://www.apispreadsheets.com/table/xOL3PyVQ08gWOzpx/
-<script>
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"
-</script>
+var valueRange = document.getElementById("rangeValue");
+
+function getRangeValue(val) {
+    valueRange.innerHTML = val;
+}
+
+var submitForm = document.getElementsByClassName("btn-submit")[0];
+submitForm.addEventListener("click", function (event) {
+    alert("Terima kasih atas komentarnya!")
+})
+
+function dropdown() {
+    var x = document.getElementById("ul-dropdown");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
 
 function SubForm (){
     $.ajax({
