@@ -9,6 +9,9 @@
         width: 90%;
         margin: 0 auto;
     }
+    #container-book {
+        padding-left: 30px;
+    }
 }
 @media (min-width:1024px) {
     .box-left {
@@ -24,4 +27,8 @@
         width: 90%;
         margin: 0 auto;
     }
+    #container-book {
+        padding-left: 15px;
+    }
+}
 }
