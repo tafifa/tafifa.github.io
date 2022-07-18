@@ -238,8 +238,8 @@
                         <textarea id="comment" name="comment" rows="8" cols="80" value="" placeholder="Isi komentarmu disini!" required></textarea>
 
                         <div class="range">
-                            <label for="rating">Rate my website : </label>
-                            <input type="range" name="rating" id="range" min="0" max="5" onchange="getRangeValue(this.value);">
+                            <label for="range">Rate my website : </label>
+                            <input type="range" name="range" id="range" min="0" max="5" onchange="getRangeValue(this.value);">
                             <p> <span id="rangeValue">-</span></p>
                         </div>
 
@@ -275,17 +275,17 @@
         }
 
         function SubForm (){
-            $.ajax({
-                url:"https://api.apispreadsheets.com/data/xOL3PyVQ08gWOzpx/",
-                type:"post",
-                data:$("#myForm").serializeArray(),
-                success: function(){
-                    alert("Form Data Submitted :)")
-                },
-                error: function(){
-                    alert("There was an error :(")
-                }
-            });
-        }
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/juzl7hDDLWjqik6h/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
     </script>
 </html>
