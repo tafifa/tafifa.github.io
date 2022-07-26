@@ -23,6 +23,10 @@ header {
 header p {
     text-indent: 30px;
 }
+header a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* This is styles for main*/
 main {

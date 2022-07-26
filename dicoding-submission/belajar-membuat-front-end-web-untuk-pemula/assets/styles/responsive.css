@@ -15,11 +15,11 @@
 }
 @media (min-width:1024px) {
     .box-left {
-        width: 75%;
+        width: 70%;
         float: left;
     }
     .box-right {
-        width: 25%;
+        width: 30%;
         float: left;
     }
     header, main{

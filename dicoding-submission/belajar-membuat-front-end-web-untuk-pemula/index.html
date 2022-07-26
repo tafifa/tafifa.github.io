@@ -10,26 +10,26 @@
     <body>
         <header>
             <h1>My Book Collection</h1>
-            <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ tafifa.github.io  </p>
+            <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ <a href="https://tafifa.github.io">tafifa.github.io</a>   </p>
         </header>
         <main>
             <div class="box-left">
                 <div id="book-insert">
                     <div id="container">
                         <h2>Masukkan buku baru</h2>
-                        <form class="form-input" action="index.html" method="post">
+                        <form id="input-form" class="form-input" action="index.html" method="post">
                             <label class="input" for="book-name">Judul Buku: </label>
-                            <input type="text" name="book-name" value="">
+                            <input id="name" type="text" name="book-name" value="">
 
                             <label class="input" for="book-author">Penulis Buku: </label>
-                            <input type="text" name="book-author" value="">
+                            <input id="author" type="text" name="book-author" value="">
 
                             <label class="input" for="book-year">Tahun Terbitan: </label>
-                            <input type="number" name="book-year" value="">
+                            <input id="year" type="number" name="book-year" value="">
 
                             <div class="btn-option">
-                                <button type="button" class="add-option01" name="button">Masukkan ke rak sudah selesai dibaca</button>
-                                <button type="button" class="add-option02" name="button">Masukkan ke rak belum selesai dibaca</button>
+                                <button type="button" class="add-option01" name="button" id="submitReaded">Masukkan ke rak sudah selesai dibaca</button>
+                                <button type="button" class="add-option02" name="button" id="submitNotreaded">Masukkan ke rak belum selesai dibaca</button>
                             </div>
                         </form>
                     </div>
@@ -37,7 +37,7 @@
                 <div id="book-search">
                     <div id="container">
                         <h2>Cari Buku</h2>
-                        <form class="form-search" action="index.html" method="post">
+                        <form id="search-form" class="form-search" action="index.html" method="post">
                             <label for="radio-option">Cari berdasarkan apa?</label>
                             <select class="search-option" name="">
                                 <option value="search-name">Judul Buku</option>
@@ -59,6 +59,9 @@
                 <div id="container">
                     <div id="bookshelf-readed">
                         <h2>Rak Buku Sudah Dibaca</h2>
+                        <div id="shelf-readed">
+
+                        </div>
                         <!--
                         <div class="readed book00">
                             <div id="container-book">
@@ -71,7 +74,7 @@
                             </div>
                         </div>
                         -->
-                        <!---->
+                        <!--
                         <div class="readed book-testing">
                             <div id="container-book">
                                 <h3>Subtle Art of Not Giving a F*ck!</h3>
@@ -82,10 +85,13 @@
                                 <input type="button" class="delete" name="" value="Hapus Buku">
                             </div>
                         </div>
-                        <!---->
+                        -->
                     </div>
                     <div id="bookshelf-not-readed">
                         <h2>Rak Buku Belum Dibaca</h2>
+                        <div id="shelf-not-readed">
+
+                        </div>
                         <!--
                         <div class="not-readed book00">
                             <div id="container-book">
@@ -98,7 +104,7 @@
                             </div>
                         </div>
                         -->
-                        <!---->
+                        <!--
                         <div class="not-readed book-testing">
                             <div id="container-book">
                                 <h3>Outliers</h3>
@@ -109,7 +115,7 @@
                                 <input type="button" class="delete" name="" value="Hapus Buku">
                             </div>
                         </div>
-                        <!---->
+                        -->
                     </div>
                 </div>
             </div>
@@ -119,4 +125,5 @@
             <p>Belajar Membuat Front-End Web Untuk Pemula &#169; 2022, Dicoding Academy</p>
         </footer>
     </body>
+    <script type="text/javascript" src="assets/scripts/script.js"></script>
 </html>
