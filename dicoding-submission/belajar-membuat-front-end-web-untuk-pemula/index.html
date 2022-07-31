@@ -1,129 +1,107 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>BookShelf Webpage</title>
-        <link rel="stylesheet" href="assets/styles/style.css">
-        <link rel="stylesheet" href="assets/styles/responsive.css">
-    </head>
-    <body>
-        <header>
-            <h1>My Book Collection</h1>
-            <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ <a href="https://tafifa.github.io">tafifa.github.io</a>   </p>
-        </header>
-        <main>
-            <div class="box-left">
-                <div id="book-insert">
-                    <div id="container">
-                        <h2>Masukkan buku baru</h2>
-                        <form id="input-form" class="form-input" action="index.html" method="post">
-                            <label class="input" for="book-name">Judul Buku: </label>
-                            <input id="name" type="text" name="book-name" value="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BookShelf Webpage</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/responsive.css">
+  </head>
+  <body>
+    <header>
+        <h1>My Book Collection</h1>
+        <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ <a href="https://tafifa.github.io">tafifa.github.io</a>   </p>
+    </header>
+    <main>
+      <div class="box-left">
+        <article class="book-insert">
+          <div class="container">
+            <h2>Masukkan Buku Baru</h2>
+            <form class="form-input" action="index.html" method="post">
+              <div class="text-based-form">
+                <label class="input" for="book-title">Judul Buku: </label>
+                <input id="title" type="text" name="book-title" value="">
 
-                            <label class="input" for="book-author">Penulis Buku: </label>
-                            <input id="author" type="text" name="book-author" value="">
+                <label class="input" for="book-author">Penulis Buku: </label>
+                <input id="author" type="text" name="book-author" value="">
 
-                            <label class="input" for="book-year">Tahun Terbitan: </label>
-                            <input id="year" type="number" name="book-year" value="">
+                <label class="input" for="book-year">Tahun Terbitan: </label>
+                <input id="year" type="number" name="book-year" value="" maxlength="4">
+              </div>
 
-                            <div class="btn-option">
-                                <button type="button" class="add-option01" name="button" id="submitReaded">Masukkan ke rak sudah selesai dibaca</button>
-                                <button type="button" class="add-option02" name="button" id="submitNotreaded">Masukkan ke rak belum selesai dibaca</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div id="book-search">
-                    <div id="container">
-                        <h2>Cari Buku</h2>
-                        <form id="search-form" class="form-search" action="index.html" method="post">
-                            <label for="radio-option">Cari berdasarkan apa?</label>
-                            <select class="search-option" name="">
-                                <option value="search-name">Judul Buku</option>
-                                <option value="search-author">Penulis Buku</option>
-                                <option value="search-year">Tahun Terbitan</option>
-                            </select><br>
+              <label for="checkbox">Apakah Anda Sudah Selesai Membacanya? </label>
+              <input id="isReaded" type="checkbox" name="checkbox" value="">
+              <br>
 
-                            <div class="search-bar">
-                                <label for="">Isi data berikut: </label>
-                                <input class="search" type="text" name="for-name" value="">
+              <button type="submit" class="btn2" name="button">Masukkan ke Rak Belum Selesai Dibaca</button>
+            </form>
+          </div>
+        </article>
+        <article class="book-search">
+          <div class="container">
+            <h2>Cari Buku</h2>
+            <form class="form-search" action="index.html" method="post">
+              <label for="radio-option">Cari Beradasarkan Apa?</label>
+              <select class="search-option" name="radio-option">
+                <option value="title-search">Judul Buku</option>
+                <option value="author-search">Penulis Buku</option>
+                <option value="year-search">Tahun Terbit</option>
+              </select>
+              <br>
 
-                                <button type="button" name="button">Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+              <div class="search-bar">
+                <label for="bar-search">Isi data berikut: </label>
+                <input id="search" type="text" name="" value="">
+
+                <button type="button" name="button">Cari</button>
+              </div>
+            </form>
+          </div>
+        </article>
+      </div>
+      <aside class="box-right">
+        <div class="container">
+          <section class="shelf-container">
+            <h2>Rak Buku Sudah Dibaca</h2>
+            <div class="readed-shelf">
+
+              <div class="readed book01">
+                  <div id="container-book">
+                      <h3>Subtle Art of Not Giving a F*ck!</h3>
+                      <p>Penulis: Mark Manson</p>
+                      <p>Tahun Terbit: 2016</p>
+
+                      <input type="button" class="btn2" name="" id="swap" value="Belum Selesai Dibaca">
+                      <input type="button" class="btn3" name="" id="delete" value="Hapus Buku">
+                  </div>
+              </div>
+
             </div>
-            <div class="box-right">
-                <div id="container">
-                    <div id="bookshelf-readed">
-                        <h2>Rak Buku Sudah Dibaca</h2>
-                        <div id="shelf-readed">
+          </section>
+          <section class="shelf-container">
+            <h2>Rak Buku Belum Dibaca</h2>
+            <div class="notreaded-shelf">
 
-                        </div>
-                        <!--
-                        <div class="readed book00">
-                            <div id="container-book">
-                                <h3>'Judul Buku'</h3>
-                                <p>Penulis: 'nama penulis buku'</p>
-                                <p>Tahun Terbit: 'tahun terbit buku'</p>
+              <div class="not-readed book01">
+                <div id="container-book">
+                    <h3>Outliers</h3>
+                    <p>Penulis: Malcom Gladwell</p>
+                    <p>Tahun Terbit: 2008</p>
 
-                                <input type="button" class="move add-option02" name="" value="Belum Selesai Dibaca">
-                                <input type="button" class="delete" name="" value="Hapus Buku">
-                            </div>
-                        </div>
-                        -->
-                        <!--
-                        <div class="readed book-testing">
-                            <div id="container-book">
-                                <h3>Subtle Art of Not Giving a F*ck!</h3>
-                                <p>Penulis: Mark Manson</p>
-                                <p>Tahun Terbit: 2016</p>
-
-                                <input type="button" class="move add-option02" name="" value="Belum Selesai Dibaca">
-                                <input type="button" class="delete" name="" value="Hapus Buku">
-                            </div>
-                        </div>
-                        -->
-                    </div>
-                    <div id="bookshelf-not-readed">
-                        <h2>Rak Buku Belum Dibaca</h2>
-                        <div id="shelf-not-readed">
-
-                        </div>
-                        <!--
-                        <div class="not-readed book00">
-                            <div id="container-book">
-                                <h3>'Judul Buku'</h3>
-                                <p>Penulis: 'nama penulis buku'</p>
-                                <p>Tahun Terbit: 'tahun terbit buku'</p>
-
-                                <input type="button" class="move add-option01"  name="" value="Sudah Selesai Dibaca">
-                                <input type="button" class="delete" name="" value="Hapus Buku">
-                            </div>
-                        </div>
-                        -->
-                        <!--
-                        <div class="not-readed book-testing">
-                            <div id="container-book">
-                                <h3>Outliers</h3>
-                                <p>Penulis: Malcom Gladwell</p>
-                                <p>Tahun Terbit: 2008</p>
-
-                                <input type="button" class="move add-option01"  name="" value="Sudah Selesai Dibaca">
-                                <input type="button" class="delete" name="" value="Hapus Buku">
-                            </div>
-                        </div>
-                        -->
-                    </div>
+                    <input type="button" class="btn1"  name="" id="swap" value="Sudah Selesai Dibaca">
+                    <input type="button" class="btn3" name="" id="delete" value="Hapus Buku">
                 </div>
+              </div>
+
             </div>
-            <div class="clear"></div>
-        </main>
-        <footer>
-            <p>Belajar Membuat Front-End Web Untuk Pemula &#169; 2022, Dicoding Academy</p>
-        </footer>
-    </body>
-    <script type="text/javascript" src="assets/scripts/script.js"></script>
+          </section>
+        </div>
+      </aside>
+      <div class="clear"></div>
+    </main>
+    <footer>
+        <p>Belajar Membuat Front-End Web Untuk Pemula &#169; 2022, Dicoding Academy</p>
+    </footer>
+  </body>
+  <script type="text/javascript" src="assets/scripts/script.js"></script>
 </html>

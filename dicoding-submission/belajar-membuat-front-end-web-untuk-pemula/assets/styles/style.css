@@ -3,7 +3,7 @@
 html, body,
 ul, ol, li,
 h1, h2, h3, h4, h5, h6, p,
-form, input, div, article, header, main {
+form, input, div, article, aside, section, header, main {
   margin: 0;
   padding: 0;
 }
@@ -40,14 +40,14 @@ h2 {
 button, input {
     border: none;
 }
-#container {
+.container {
     background-color: white;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
 }
 /* form input */
-.form-input input {
+.text-based-form input {
     display: block;
     width: 90%;
     padding: 10px 5px;
@@ -69,27 +69,19 @@ button, input {
     opacity: 0.7;
     cursor: pointer;
 }
-.add-option01 {
-    background-color: #FFD154;
-}
-.add-option02 {
-    background-color: #8f6a04;
-}
+
 /* form search */
 .form-search input, .form-search button {
     padding: 5px;
     border-radius: 5px;
     border-style: none;
 }
-.form-search ul {
-    margin: 10px 0;
-}
 .form-search button {
     margin-top: 10px;
     color: white;
     background-color: green;
 }
-.search {
+#search {
     width: 50%;
     background-color: #cccccc;
 }
@@ -102,18 +94,24 @@ button, input {
 #container-book {
     margin-bottom: 30px;
 }
-.move, .delete {
+.btn1 {
+  background-color: #FFD154;
+}
+.btn2 {
+  background-color: #8f6a04;
+}
+.btn3 {
+    background-color: red;
+}
+.btn1, .btn2, .btn3 {
     padding: 5px;
     margin: 5px 0;
     color: white;
     border-radius: 5px;
 }
-.move:hover, .delete:hover {
+#swap:hover, #delete:hover {
     opacity: 0.7;
     cursor: pointer;
-}
-.delete {
-    background-color: red;
 }
 h3 {
     margin-bottom: 10px;
@@ -121,12 +119,13 @@ h3 {
 .box-right p {
     margin-bottom: 5px;
 }
-#bookshelf-readed, #bookshelf-not-readed {
+.shelf-container {
     margin: 15px 0;
     padding: 10px 0;
     border-top: dotted;
     border-bottom: dotted;
 }
+
 
 /* This is styles for footer */
 footer {

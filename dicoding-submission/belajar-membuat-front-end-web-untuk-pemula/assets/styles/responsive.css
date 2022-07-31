@@ -1,3 +1,8 @@
+@media (max-width:422px) {
+  .search-bar button, .form-input button {
+    width: 100%;
+  }
+}
 @media (max-width:480px)  {
     .search {
         display: block;
@@ -30,5 +35,4 @@
     #container-book {
         padding-left: 15px;
     }
-}
 }
