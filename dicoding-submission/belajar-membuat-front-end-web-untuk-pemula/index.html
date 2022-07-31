@@ -20,20 +20,21 @@
             <form class="form-input" action="index.html" method="post">
               <div class="text-based-form">
                 <label class="input" for="book-title">Judul Buku: </label>
-                <input id="title" type="text" name="book-title" value="">
+                <input id="title" type="text" name="book-title" value="" required>
 
                 <label class="input" for="book-author">Penulis Buku: </label>
-                <input id="author" type="text" name="book-author" value="">
+                <input id="author" type="text" name="book-author" value="" required>
 
                 <label class="input" for="book-year">Tahun Terbitan: </label>
-                <input id="year" type="number" name="book-year" value="" maxlength="4">
+                <input id="year" type="number" name="book-year" value="" required>
               </div>
 
               <label for="checkbox">Apakah Anda Sudah Selesai Membacanya? </label>
               <input id="isReaded" type="checkbox" name="checkbox" value="">
               <br>
 
-              <button type="submit" class="btn2" name="button">Masukkan ke Rak Belum Selesai Dibaca</button>
+              <button id="submitBtn" type="submit" class="btn2" name="button">Masukkan ke Rak Belum Selesai Dibaca</button>
+              <button id="submitBtn" type="submit" class="btn1" name="button" hidden>Masukkan ke Rak Sudah Selesai Dibaca</button>
             </form>
           </div>
         </article>
@@ -104,4 +105,5 @@
     </footer>
   </body>
   <script type="text/javascript" src="assets/scripts/script.js"></script>
+  <script type="text/javascript" src="assets/scripts/feature.js"></script>
 </html>

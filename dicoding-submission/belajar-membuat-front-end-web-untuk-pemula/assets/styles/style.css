@@ -16,13 +16,7 @@ body, button {
 }
 
 /* This is styles for header */
-header {
-    height: auto;
-    padding-bottom: 15px;
-}
-header p {
-    text-indent: 30px;
-}
+
 header a {
     text-decoration: none;
     color: inherit;
@@ -59,6 +53,7 @@ button, input {
 .form-input button {
     padding: 5px;
     margin-bottom: 5px;
+    margin-top: 10px;
     color: white;
     border-radius: 5px;
 }
