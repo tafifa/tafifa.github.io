@@ -17,7 +17,7 @@
         <article class="book-insert">
           <div class="container">
             <h2>Masukkan Buku Baru</h2>
-            <form class="form-input" action="index.html" method="post">
+            <form class="form-input" id="form-input" action="index.html" method="post">
               <div class="text-based-form">
                 <label class="input" for="book-title">Judul Buku: </label>
                 <input id="title" type="text" name="book-title" value="" required>
@@ -30,7 +30,7 @@
               </div>
 
               <label for="checkbox">Apakah Anda Sudah Selesai Membacanya? </label>
-              <input id="isReaded" type="checkbox" name="checkbox" value="">
+              <input id="isReaded" type="checkbox" name="checkbox" value="" onclick="isClicked()">
               <br>
 
               <button id="submitBtn" type="submit" class="btn2" name="button">Masukkan ke Rak Belum Selesai Dibaca</button>
@@ -64,35 +64,17 @@
         <div class="container">
           <section class="shelf-container">
             <h2>Rak Buku Sudah Dibaca</h2>
-            <div class="readed-shelf">
+            <div class="readed-shelf" id="completedBookList">
 
-              <div class="readed book01">
-                  <div id="container-book">
-                      <h3>Subtle Art of Not Giving a F*ck!</h3>
-                      <p>Penulis: Mark Manson</p>
-                      <p>Tahun Terbit: 2016</p>
 
-                      <input type="button" class="btn2" name="" id="swap" value="Belum Selesai Dibaca">
-                      <input type="button" class="btn3" name="" id="delete" value="Hapus Buku">
-                  </div>
-              </div>
 
             </div>
           </section>
           <section class="shelf-container">
             <h2>Rak Buku Belum Dibaca</h2>
-            <div class="notreaded-shelf">
+            <div class="notreaded-shelf" id="uncompletedBookList">
 
-              <div class="not-readed book01">
-                <div id="container-book">
-                    <h3>Outliers</h3>
-                    <p>Penulis: Malcom Gladwell</p>
-                    <p>Tahun Terbit: 2008</p>
 
-                    <input type="button" class="btn1"  name="" id="swap" value="Sudah Selesai Dibaca">
-                    <input type="button" class="btn3" name="" id="delete" value="Hapus Buku">
-                </div>
-              </div>
 
             </div>
           </section>
