@@ -1,21 +1,51 @@
-/**
- * [
- *    {
- *      id: <int>
- *      title: <string>
- *      author: <string>
- *      year: <number>
- *      isCompleted: <boolean>
- *    }
- * ]
- */
+const localStorageKey = 'BOOKSHELF';
+
+function isStorageExist() /* boolean */ {
+  if (typeof (Storage) === undefined) {
+    alert('Browser kamu tidak mendukung local storage');
+    return false;
+  }
+  return true;
+}
+
+function saveData() {
+  if (isStorageExist()) {
+    const parsed = JSON.stringify(books);
+    localStorage.setItem(localStorageKey, parsed);
+  }
+}
+
+function removeData() {
+  if (isStorageExist()) {
+    const parsed = JSON.stringify(books);
+    localStorage.removeItem(localStorageKey, parsed);
+  }
+}
+
+function loadDataFromStorage() {
+  const serializedData = localStorage.getItem(localStorageKey);
+  let data = JSON.parse(serializedData);
+
+  if (data !== null) {
+    for (const book of data) {
+      books.push(book);
+    }
+  }
+
+  document.dispatchEvent(new Event(RENDER_EVENT));
+}
 
 const books = []
 const RENDER_EVENT = 'render-books'
 
+// LOAD DOM & SUBMIT FORM
 document.addEventListener('DOMContentLoaded', function () {
   reset()
   const submitForm /* HTMLFormElement */ = document.getElementById('form-input');
+
+  if (isStorageExist()) {
+    loadDataFromStorage();
+  }
 
   submitForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -27,10 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// GENERATE BOOK ID
 function generateId() {
   return +new Date();
 }
 
+// GENERATE BOOK OBJECT
 function generateBookObject(id, title, author, year, isCompleted) {
   return {
     id,
@@ -41,6 +73,7 @@ function generateBookObject(id, title, author, year, isCompleted) {
   }
 }
 
+// EVENT WHEN CHECKBOX TRUE
 function isClicked() {
   const checkbox = document.getElementById('isReaded');
   if (checkbox.checked != true) {
@@ -55,6 +88,7 @@ function isClicked() {
   }
 }
 
+// READING INFO FROM INPUT & INITIALIZATION VARIABLE TO OBJECT
 function addBook() {
   const titleBook = document.getElementById('title').value;
   const authorBook = document.getElementById('author').value;
@@ -66,15 +100,15 @@ function addBook() {
   books.push(bookObject);
 
   document.dispatchEvent(new Event(RENDER_EVENT));
+  saveData();
 }
 
 
-
+// RENDERING BOOK
 document.addEventListener(RENDER_EVENT, function () {
   const uncompletedList = document.getElementById('uncompletedBookList');
   const completedList = document.getElementById('completedBookList');
 
-  // clearing list item
   uncompletedList.innerHTML = '';
   completedList.innerHTML = '';
 
@@ -88,6 +122,7 @@ document.addEventListener(RENDER_EVENT, function () {
   }
 });
 
+// MAKE HTML ELEMENT AFTER OBJECT PROPERTY GET INITIALIZATION
 function makeBook(bookObject) {
   const {id, title, author, year, isCompleted} = bookObject;
 
@@ -118,6 +153,7 @@ function makeBook(bookObject) {
   return element;
 }
 
+// RESET INPUT VALUE
 function reset() {
   document.getElementById('title').value = '';
   document.getElementById('author').value = '';
@@ -125,9 +161,8 @@ function reset() {
   document.getElementById('isReaded').checked = false;
 }
 
-// MAINTENANCE
+// SWAPPING CONDITION OF BOOK PROPERTY WHEN SWAP BUTTON CLICKED TO OTHER BOOKSHELF
 function swap(id) {
-  // bakal addbook lagi dengan btnstatus yang baru
   const idx = books.findIndex(item => item.id === id);
 
   const status = !books[idx].isCompleted;
@@ -147,23 +182,25 @@ function swap(id) {
   !status ? popupsBtn("swapNotRead") : popupsBtn("swapRead");
   }
 
+// REMOVE BOOK FROM BOOKSHELF
 function remove(id) {
-  const idx = books.findIndex(item => item.id === id);
 
-  const status = books[idx].isCompleted;
 
-  status ? popupsBtn("removeRead") : popupsBtn("removeNotRead");
+  if (confirm("APAKAH KAMU INGIN MENGHAPUS BUKU INI?")) {
+    const idx = books.findIndex(item => item.id === id);
 
-  document.getElementById(id).style.display = 'none'
-  books.splice(idx,1);
+    const status = books[idx].isCompleted;
+
+    document.getElementById(id).style.display = 'none'
+    books.splice(idx,1);
+
+    removeData();
+
+    status ? popupsBtn("removeRead") : popupsBtn("removeNotRead");
+  }
 }
 
-function sbmit() {
-  const val = document.getElementById('submitBtn')
-
-  val.innerText === "Masukkan ke Rak Belum Selesai Dibaca" ? popupsBtn("addRead") : popupsBtn("addNotRead")
-}
-
+// SWITCH CASE FOR ALL EVENT ALERT
 function popupsBtn(id) {
 
   const str = "\n\t\t--->\t\t[RAK BUKU SUDAH SELESAI DIBACA]"
