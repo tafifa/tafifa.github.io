@@ -37,7 +37,7 @@ function loadDataFromStorage() {
 
   document.dispatchEvent(new Event(RENDER_EVENT));
 }
- 
+
 // LOAD DOM & SUBMIT FORM
 document.addEventListener('DOMContentLoaded', function () {
   reset()
@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
     reset()
   });
 });
- 
+
 // GENERATE BOOK ID
 function generateId() {
   return +new Date();
 }
- 
+
 // GENERATE BOOK OBJECT
 function generateBookObject(id, title, author, year, isCompleted) {
   return {
@@ -72,7 +72,7 @@ function generateBookObject(id, title, author, year, isCompleted) {
     isCompleted
   }
 }
- 
+
 // EVENT WHEN CHECKBOX TRUE
 function isClicked() {
   const checkbox = document.getElementById('isReaded');
@@ -87,7 +87,7 @@ function isClicked() {
     return true;
   }
 }
- 
+
 // READING INFO FROM INPUT & INITIALIZATION VARIABLE TO OBJECT
 function addBook() {
   const titleBook = document.getElementById('title').value;
@@ -120,7 +120,7 @@ document.addEventListener(RENDER_EVENT, function () {
     }
   }
 });
- 
+
 // MAKE HTML ELEMENT AFTER OBJECT PROPERTY GET INITIALIZATION
 function makeBook(bookObject) {
   const {id, title, author, year, isCompleted} = bookObject;
@@ -142,7 +142,7 @@ function makeBook(bookObject) {
       <p>Penulis: ${author}</p>
       <p>Tahun Terbit: ${year}</p>
 
-      <input type="button" class="btn${inputVal}"  name="" id="swap" value="${btnValue}" onclick="swap(${id})">
+      <input type="button" class="btn${inputVal}"  name="" id="swap" value="${btnValue}" onclick="swapping(${id})">
       <input type="button" class="btn3" name="" id="delete" value="Hapus Buku" onclick="remove(${id})">
     </div>
   </div>
@@ -150,7 +150,7 @@ function makeBook(bookObject) {
 
   return element;
 }
- 
+
 // RESET INPUT VALUE
 function reset() {
   document.getElementById('title').value = '';
@@ -159,9 +159,10 @@ function reset() {
   document.getElementById('isReaded').checked = false;
   document.getElementById('search-bar').value = '';
 }
- 
+
 // SWAPPING CONDITION OF BOOK PROPERTY WHEN SWAP BUTTON CLICKED TO OTHER BOOKSHELF
-function swap(id) {
+function swapping(id) {
+  console.log("TEST1")
   const idx = books.findIndex(item => item.id === id);
 
   const status = !books[idx].isCompleted;
@@ -174,15 +175,19 @@ function swap(id) {
   const bookObject = generateBookObject(generatedID, titleBook, authorBook, yearBook, status)
   books.push(bookObject);
 
+  console.log("TEST2")
   document.getElementById(id).style.display = 'none'
   removeData();
   books.splice(idx,1);
   saveData();
 
+  console.log("TEST3")
   document.dispatchEvent(new Event(RENDER_EVENT));
   !status ? popupsBtn("swapNotRead") : popupsBtn("swapRead");
+  window.location.reload();
+  console.log("SUCCESS")
 }
- 
+
 // REMOVE BOOK FROM BOOKSHELF
 function remove(id) {
 
@@ -197,9 +202,9 @@ function remove(id) {
     saveData();
 
     status ? popupsBtn("removeRead") : popupsBtn("removeNotRead");
-  }
+  } window.location.reload();
 }
- 
+
 // RESET BUTTON
 document.getElementById('reset').addEventListener('click', function() {
   if (confirm("APAKAH KAMU YAKIN INGIN MENGHAPUS SEMUA DATA?")) {
@@ -207,7 +212,7 @@ document.getElementById('reset').addEventListener('click', function() {
     window.location.reload();
   }
 })
- 
+
 // SEARCH BOOK
 function search() {
   searching()
@@ -218,7 +223,7 @@ function search() {
     const searchList = document.getElementById('searchList');
     searchList.innerHTML = `
 
-    `;  
+    `;
     document.dispatchEvent(new Event(RENDERSEARCH_EVENT))
   } else popupsBtn("notFound");
 }
@@ -254,7 +259,7 @@ function searching() {
 
   }
 }
- 
+
 // RENDERING SEARCH
 document.addEventListener(RENDERSEARCH_EVENT, function () {
   const searchList = document.getElementById('searchList');
@@ -279,7 +284,7 @@ document.addEventListener(RENDERSEARCH_EVENT, function () {
     }
   }
 });
- 
+
 // MAKE HTML ELEMENT AFTER OBJECT PROPERTY GET INITIALIZATION
 function makeBookSearch(bookObject) {
   const {id, title, author, year, isCompleted} = bookObject;
@@ -303,7 +308,7 @@ function makeBookSearch(bookObject) {
       <p>Penulis: ${author}</p>
       <p>Tahun Terbit: ${year}</p>
 
-      <input type="button" class="btn${inputVal}"  name="" id="swap" value="${btnValue}" onclick="swap(${id})">
+      <input type="button" class="btn${inputVal}"  name="" id="swap" value="${btnValue}" onclick="swapping(${id})">
       <input type="button" class="btn3" name="" id="delete" value="Hapus Buku" onclick="remove(${id})">
     </div>
   </div>
@@ -311,7 +316,7 @@ function makeBookSearch(bookObject) {
 
   return element;
 }
- 
+
 // SWITCH CASE FOR ALL EVENT ALERT
 function popupsBtn(id) {
 
