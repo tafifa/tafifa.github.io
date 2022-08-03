@@ -3,7 +3,7 @@ const RENDER_EVENT = 'render-books'
 const RENDERSEARCH_EVENT = 'render-search-books'
 const books = []
 
-function checkStorage() /* boolean */ {
+function checkStorage() {
   if (typeof (Storage) === undefined) {
     alert('Browser kamu tidak mendukung local storage');
     return false;
@@ -37,11 +37,11 @@ function loadDataFromStorage() {
 
   document.dispatchEvent(new Event(RENDER_EVENT));
 }
-
+ 
 // LOAD DOM & SUBMIT FORM
 document.addEventListener('DOMContentLoaded', function () {
   reset()
-  const submitForm /* HTMLFormElement */ = document.getElementById('form-input');
+  const submitForm = document.getElementById('form-input');
 
   if (checkStorage()) {
     loadDataFromStorage();
@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
     reset()
   });
 });
-
+ 
 // GENERATE BOOK ID
 function generateId() {
   return +new Date();
 }
-
+ 
 // GENERATE BOOK OBJECT
 function generateBookObject(id, title, author, year, isCompleted) {
   return {
@@ -72,7 +72,7 @@ function generateBookObject(id, title, author, year, isCompleted) {
     isCompleted
   }
 }
-
+ 
 // EVENT WHEN CHECKBOX TRUE
 function isClicked() {
   const checkbox = document.getElementById('isReaded');
@@ -87,7 +87,7 @@ function isClicked() {
     return true;
   }
 }
-
+ 
 // READING INFO FROM INPUT & INITIALIZATION VARIABLE TO OBJECT
 function addBook() {
   const titleBook = document.getElementById('title').value;
@@ -102,7 +102,6 @@ function addBook() {
   document.dispatchEvent(new Event(RENDER_EVENT));
   saveData();
 }
-
 
 // RENDERING BOOK
 document.addEventListener(RENDER_EVENT, function () {
@@ -121,7 +120,7 @@ document.addEventListener(RENDER_EVENT, function () {
     }
   }
 });
-
+ 
 // MAKE HTML ELEMENT AFTER OBJECT PROPERTY GET INITIALIZATION
 function makeBook(bookObject) {
   const {id, title, author, year, isCompleted} = bookObject;
@@ -151,7 +150,7 @@ function makeBook(bookObject) {
 
   return element;
 }
-
+ 
 // RESET INPUT VALUE
 function reset() {
   document.getElementById('title').value = '';
@@ -160,7 +159,7 @@ function reset() {
   document.getElementById('isReaded').checked = false;
   document.getElementById('search-bar').value = '';
 }
-
+ 
 // SWAPPING CONDITION OF BOOK PROPERTY WHEN SWAP BUTTON CLICKED TO OTHER BOOKSHELF
 function swap(id) {
   const idx = books.findIndex(item => item.id === id);
@@ -183,7 +182,7 @@ function swap(id) {
   document.dispatchEvent(new Event(RENDER_EVENT));
   !status ? popupsBtn("swapNotRead") : popupsBtn("swapRead");
 }
-
+ 
 // REMOVE BOOK FROM BOOKSHELF
 function remove(id) {
 
@@ -200,7 +199,7 @@ function remove(id) {
     status ? popupsBtn("removeRead") : popupsBtn("removeNotRead");
   }
 }
-
+ 
 // RESET BUTTON
 document.getElementById('reset').addEventListener('click', function() {
   if (confirm("APAKAH KAMU YAKIN INGIN MENGHAPUS SEMUA DATA?")) {
@@ -208,7 +207,7 @@ document.getElementById('reset').addEventListener('click', function() {
     window.location.reload();
   }
 })
-
+ 
 // SEARCH BOOK
 function search() {
   searching()
@@ -219,7 +218,7 @@ function search() {
     const searchList = document.getElementById('searchList');
     searchList.innerHTML = `
 
-    `; // TAMBAHKAN FITUR LOADING SEARCH
+    `;  
     document.dispatchEvent(new Event(RENDERSEARCH_EVENT))
   } else popupsBtn("notFound");
 }
@@ -255,7 +254,7 @@ function searching() {
 
   }
 }
-
+ 
 // RENDERING SEARCH
 document.addEventListener(RENDERSEARCH_EVENT, function () {
   const searchList = document.getElementById('searchList');
@@ -280,7 +279,7 @@ document.addEventListener(RENDERSEARCH_EVENT, function () {
     }
   }
 });
-
+ 
 // MAKE HTML ELEMENT AFTER OBJECT PROPERTY GET INITIALIZATION
 function makeBookSearch(bookObject) {
   const {id, title, author, year, isCompleted} = bookObject;
@@ -312,7 +311,7 @@ function makeBookSearch(bookObject) {
 
   return element;
 }
-
+ 
 // SWITCH CASE FOR ALL EVENT ALERT
 function popupsBtn(id) {
 
