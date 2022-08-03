@@ -1,8 +1,16 @@
 @media (max-width:422px) {
-  .search-bar button, .form-input button {
+  .search-bar br {
+    display: block;
+  }
+  .search-bar button, #search-bar, .form-input button {
     width: 100%;
   }
 }
+@media (max-width:709px) {
+    #dummy {
+        display: none;
+    }
+  }
 @media (max-width:1024px) {
     header, main {
         max-width: 700px;
@@ -19,16 +27,14 @@
       margin: 0 auto;
       text-align: center;
     }
-    header p {
-    }
 }
 @media (min-width:1024px) {
     .box-left {
-        width: 70%;
+        width: 65%;
         float: left;
     }
     .box-right {
-        width: 30%;
+        width: 35%;
         float: left;
     }
     header, main{

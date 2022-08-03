@@ -41,7 +41,7 @@
         <article class="book-search">
           <div class="container">
             <h2>Cari Buku</h2>
-            <form class="form-search" action="index.html" method="post">
+            <form class="form-search" onSubmit="return false;">
               <label for="radio-option">Cari Beradasarkan Apa?</label>
               <select class="search-option" name="radio-option">
                 <option value="title-search">Judul Buku</option>
@@ -52,9 +52,18 @@
 
               <div class="search-bar">
                 <label for="bar-search">Isi data berikut: </label>
-                <input id="search" type="text" name="" value="">
+                <br hidden>
+                <input id="search-bar" type="search" name="" value="">
 
-                <button type="button" name="button">Cari</button>
+                <button id="searchBtn" type="button" name="button" onclick="search()">Cari</button>
+              </div>
+
+              <div class="search-result" hidden>
+                <section class="shelf-container result" id="searchList">
+
+
+
+                </section>
               </div>
             </form>
           </div>
@@ -62,8 +71,11 @@
       </div>
       <aside class="box-right">
         <div class="container">
+          <h2>Rak Buku</h2>
+          <button type="button" name="button" id="reset">Reset Data</button>
+          <div class="clear"></div>
           <section class="shelf-container">
-            <h2>Rak Buku Sudah Dibaca</h2>
+            <h3>Rak Buku Sudah Dibaca</h3>
             <div class="readed-shelf" id="completedBookList">
 
 
@@ -71,7 +83,7 @@
             </div>
           </section>
           <section class="shelf-container">
-            <h2>Rak Buku Belum Dibaca</h2>
+            <h3>Rak Buku Belum Dibaca</h3>
             <div class="notreaded-shelf" id="uncompletedBookList">
 
 

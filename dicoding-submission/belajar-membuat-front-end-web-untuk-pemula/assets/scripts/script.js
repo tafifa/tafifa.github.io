@@ -1,6 +1,9 @@
 const localStorageKey = 'BOOKSHELF';
+const RENDER_EVENT = 'render-books'
+const RENDERSEARCH_EVENT = 'render-search-books'
+const books = []
 
-function isStorageExist() /* boolean */ {
+function checkStorage() /* boolean */ {
   if (typeof (Storage) === undefined) {
     alert('Browser kamu tidak mendukung local storage');
     return false;
@@ -9,22 +12,22 @@ function isStorageExist() /* boolean */ {
 }
 
 function saveData() {
-  if (isStorageExist()) {
-    const parsed = JSON.stringify(books);
-    localStorage.setItem(localStorageKey, parsed);
+  if (checkStorage()) {
+    const parsing = JSON.stringify(books);
+    localStorage.setItem(localStorageKey, parsing);
   }
 }
 
 function removeData() {
-  if (isStorageExist()) {
-    const parsed = JSON.stringify(books);
-    localStorage.removeItem(localStorageKey, parsed);
+  if (checkStorage()) {
+    const parsing = JSON.stringify(books);
+    localStorage.removeItem(localStorageKey, parsing);
   }
 }
 
 function loadDataFromStorage() {
-  const serializedData = localStorage.getItem(localStorageKey);
-  let data = JSON.parse(serializedData);
+  const booksData = localStorage.getItem(localStorageKey);
+  let data = JSON.parse(booksData);
 
   if (data !== null) {
     for (const book of data) {
@@ -35,15 +38,12 @@ function loadDataFromStorage() {
   document.dispatchEvent(new Event(RENDER_EVENT));
 }
 
-const books = []
-const RENDER_EVENT = 'render-books'
-
 // LOAD DOM & SUBMIT FORM
 document.addEventListener('DOMContentLoaded', function () {
   reset()
   const submitForm /* HTMLFormElement */ = document.getElementById('form-input');
 
-  if (isStorageExist()) {
+  if (checkStorage()) {
     loadDataFromStorage();
   }
 
@@ -127,20 +127,19 @@ function makeBook(bookObject) {
   const {id, title, author, year, isCompleted} = bookObject;
 
   if (isCompleted) {
-    var className = "readed"
-    var inputVal = "1"
-    var btnValue = "Sudah Selesai Dibaca"
-  }
-  else {
     var className = "not-readed"
     var inputVal = '2'
     var btnValue = "Belum Selesai Dibaca"
+  } else {
+    var className = "readed"
+    var inputVal = "1"
+    var btnValue = "Sudah Selesai Dibaca"
   }
 
   let element = `
   <div class="${className}-book" id="${id}">
     <div id="container-book">
-      <h3>${title}</h3>
+      <h4>${title}</h4>
       <p>Penulis: ${author}</p>
       <p>Tahun Terbit: ${year}</p>
 
@@ -159,6 +158,7 @@ function reset() {
   document.getElementById('author').value = '';
   document.getElementById('year').value = '';
   document.getElementById('isReaded').checked = false;
+  document.getElementById('search-bar').value = '';
 }
 
 // SWAPPING CONDITION OF BOOK PROPERTY WHEN SWAP BUTTON CLICKED TO OTHER BOOKSHELF
@@ -176,28 +176,141 @@ function swap(id) {
   books.push(bookObject);
 
   document.getElementById(id).style.display = 'none'
+  removeData();
   books.splice(idx,1);
+  saveData();
 
   document.dispatchEvent(new Event(RENDER_EVENT));
   !status ? popupsBtn("swapNotRead") : popupsBtn("swapRead");
-  }
+}
 
 // REMOVE BOOK FROM BOOKSHELF
 function remove(id) {
-
 
   if (confirm("APAKAH KAMU INGIN MENGHAPUS BUKU INI?")) {
     const idx = books.findIndex(item => item.id === id);
 
     const status = books[idx].isCompleted;
 
-    document.getElementById(id).style.display = 'none'
-    books.splice(idx,1);
-
+    document.getElementById(id).style.display = 'none';
     removeData();
+    books.splice(idx,1);
+    saveData();
 
     status ? popupsBtn("removeRead") : popupsBtn("removeNotRead");
   }
+}
+
+// RESET BUTTON
+document.getElementById('reset').addEventListener('click', function() {
+  if (confirm("APAKAH KAMU YAKIN INGIN MENGHAPUS SEMUA DATA?")) {
+    removeData();
+    window.location.reload();
+  }
+})
+
+// SEARCH BOOK
+function search() {
+  searching()
+
+  const arr = searching();
+  if (arr.length > 0) {
+    document.getElementsByClassName('search-result')[0].style.display = 'block';
+    const searchList = document.getElementById('searchList');
+    searchList.innerHTML = `
+
+    `; // TAMBAHKAN FITUR LOADING SEARCH
+    document.dispatchEvent(new Event(RENDERSEARCH_EVENT))
+  } else popupsBtn("notFound");
+}
+
+function searching() {
+  const option = document.getElementsByClassName('search-option')[0].value;
+  const inputVal = document.getElementById('search-bar').value;
+
+  const searchArray = [];
+
+  if (inputVal === "") {
+    return searchArray;
+  } else if (option === "title-search") {
+    for (const bookItem of books) {
+      if (bookItem.title.toLowerCase().includes(inputVal.toLowerCase())) {
+        searchArray.unshift(bookItem);
+      }
+    } return searchArray;
+
+  } else if (option === "author-search") {
+    for (const bookItem of books) {
+      if (bookItem.author === inputVal) {
+        searchArray.unshift(bookItem);
+      }
+    } return searchArray;
+
+  } else if (option === "year-search") {
+    for (const bookItem of books) {
+      if (bookItem.year === inputVal) {
+        searchArray.unshift(bookItem);
+      }
+    } return searchArray;
+
+  }
+}
+
+// RENDERING SEARCH
+document.addEventListener(RENDERSEARCH_EVENT, function () {
+  const searchList = document.getElementById('searchList');
+
+  const searchArray = searching();
+
+  searchList.innerHTML = '';
+
+  const dummyElement = `
+    <div class="resultSearch" id="dummy"></div>
+  `;
+
+  if (searchArray.length % 2 != 0) {
+    for (const bookItem of searchArray) {
+      const bookElement = makeBookSearch(bookItem);
+      searchList.innerHTML += bookElement;
+    } searchList.innerHTML += dummyElement;
+  } else {
+    for (const bookItem of searchArray) {
+      const bookElement = makeBookSearch(bookItem);
+      searchList.innerHTML += bookElement;
+    }
+  }
+});
+
+// MAKE HTML ELEMENT AFTER OBJECT PROPERTY GET INITIALIZATION
+function makeBookSearch(bookObject) {
+  const {id, title, author, year, isCompleted} = bookObject;
+
+  if (isCompleted) {
+    var className = "not-readed"
+    var inputVal = '2'
+    var btnValue = "Belum Selesai Dibaca"
+    var emValue = "Sudah Selesai Dibaca"
+  } else {
+    var className = "readed"
+    var inputVal = "1"
+    var btnValue = "Sudah Selesai Dibaca"
+    var emValue = "Belum Selesai Dibaca"
+  }
+
+  let element = `
+  <div class="resultSearch ${className}-book" id="${id}">
+    <div id="container-book">
+      <h4>${title} <span><br>[ <em>${emValue}</em> ]</span> </h4>
+      <p>Penulis: ${author}</p>
+      <p>Tahun Terbit: ${year}</p>
+
+      <input type="button" class="btn${inputVal}"  name="" id="swap" value="${btnValue}" onclick="swap(${id})">
+      <input type="button" class="btn3" name="" id="delete" value="Hapus Buku" onclick="remove(${id})">
+    </div>
+  </div>
+  `;
+
+  return element;
 }
 
 // SWITCH CASE FOR ALL EVENT ALERT
@@ -224,6 +337,9 @@ function popupsBtn(id) {
       break;
     case "removeNotRead":
       alert('DATA BUKU TELAH DIHAPUS DARI' + nstr)
+      break;
+    case "notFound":
+      alert("BUKU YANG ANDA CARI TIDAK ADA")
       break;
   }
 }
