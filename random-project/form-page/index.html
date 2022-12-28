@@ -3,23 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BookShelf Webpage</title>
+    <title>Informatics Student Registration</title>
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/responsive.css">
   </head>
   <body>
-    <header>
-      <h1>Informatics Student Registration</h1>
-    </header>
-    <body>
+    <div class="container">
+      <header>
+        <h1>Sistem Informasi Mahasiswa Informatika Universitas Tanjungpura</h1>
+      </header>
       <form>
         <label for="name">Name</label>
-        <input type="text">
+        <input id="name" type="text" name="name" value="" placeholder="Isi namamu disini!" required>
 
         <label for="nim">NIM</label>
-        <input type="text">
+        <input id="nim" type="text" name="nim" value="" placeholder="Isi NIMmu disini!" required>
+
+        <label for="comment">Comment</label>
+        <textarea name="comment" rows="10" id="comment" value="" placeholder="Isi komentarmu disini!" required></textarea>
+
+        <button type="submit" onclick="subForm()">SUBMIT HERE</button>
       </form>
-    </body>
+      <footer>
+        <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ tafifa.github.io  </p>
+      </footer>
+    </div>
   </body>
-  <script type="text/javascript" src="assets/scripts/script.js"></script>
+  <script type="text/javascript">
+
+  </script>
 </html>

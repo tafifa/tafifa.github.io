@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div, header, article, main {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 50%;
+  margin: 15% auto;
+  background-color: rgb(255, 255, 255);
+}
+
+header {
+  text-align: center;
+  color: white;
+  margin-bottom: 5%;
+}
+
+.container {
+  background-color: rgb(0, 162, 255); 
+  padding: 5%;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.838);
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(15,115,216,0.5);
+-moz-box-shadow: 0px 0px 15px 5px rgba(15,115,216,0.5);
+box-shadow: 0px 0px 15px 5px rgba(15,115,216,0.5);
+}
+
+.container label {
+  padding: 1%;
+}
+
+.container input, .container textarea {
+  display: block;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.869);
+  margin: 1% 0;
+  padding: 1%;
+  min-width: 95%;
+  max-width: 95%;
+}
+.container textarea {
+  min-height: 10%;
+  height: 50%;
+}
+
+.container button {
+  color: white;
+  margin: 1% 25%;
+  padding: 1%;
+  border-radius: 5px;
+  width: 50%;
+  background-color: rgb(15, 115, 216);
+  border-style: none;
+}
+.container button:hover,.container button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+footer {
+ color: white;
+ text-align: center;
+ margin: 5% 0;
+}
