@@ -58,24 +58,24 @@ header li {
 .clear {
     clear: left;
 }
-article {
+.content {
     margin-bottom: 60px;
     text-align: justify;
 }
-article h3, article img {
+.content h3, .content img {
     margin-bottom: 10px;
 }
-article h2, #aside-title h2 {
+.content h2, #aside-title h2 {
     padding-bottom: 10px;
     font-weight: 700;
 }
 ol {
     padding-left: 35px;
 }
-article p {
+.content p {
     margin-bottom: 10px;
 }
-article li {
+.content li {
     margin: 10px 0;
 }
 main p {
