@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="assets/styles/responsive.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <script
-    		src="https://code.jquery.com/jquery-3.4.1.js"
-    		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    		crossorigin="anonymous">
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
         </script>
     </head>
     <body>
@@ -187,7 +187,7 @@
                 </div>
             </aside>
 
-            <div class="box-bottom" id="form">
+            <div class="box-bottom" id="myForm">
                 <div id="container">
                     <h2>Leave me comment and rating below!</h2>
                     <form class="" action="index.html">
@@ -199,7 +199,7 @@
 
                         <div class="range">
                             <label for="range">Rate my website : </label>
-                            <input type="range" name="range" id="range" min="0" max="5" onchange="getRangeValue(this.value);">
+                            <input type="range" name="range" id="star" min="0" max="5" onchange="getRangeValue(this.value);">
                             <p> <span id="rangeValue">-</span></p>
                         </div>
 
@@ -239,7 +239,7 @@
 			$.ajax({
 				url:"https://api.apispreadsheets.com/data/5P5Q2vJCNHi9bYyZ/",
 				type:"post",
-				data:$("#form").serializeArray(),
+				data:$("#myForm").serializeArray(),
 				success: function(){
 					alert("Form Data Submitted :)")
 				},
