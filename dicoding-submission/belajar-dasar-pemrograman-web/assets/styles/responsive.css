@@ -1,6 +1,7 @@
 @media (max-width:320px)  {
 
- /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+}
+
 @media (max-width:480px)  {
     #header-title h1 {
         font-size: 45px;
@@ -8,11 +9,9 @@
     nav li {
         float: none;
     }
- /* smartphones, Android phones, landscape iPhone */ }
-@media (min-width:600px)  {
+}
 
- /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
-@media (max-width:801px)  {
+@media (max-width: 903px) {
     .item-label {
         display: none;
     }
@@ -21,7 +20,26 @@
     }
 }
 
-@media (max-width: 903px) {
+@media (max-width:1281px) {
+    main {
+        max-width: 903px;
+        margin: 0 auto;
+    }
+    .header, .table {
+        /* width: 50%; */
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .socmed {
+        text-align: center;
+    }
+    .socmed ul {
+        display: flex;
+        justify-content: center;
+    }
+
     .nav-container {
         width: auto;
         height: auto;
@@ -72,7 +90,30 @@
         color: grey;
     }
 }
-@media (min-width: 903px) {
+
+@media (min-width:1281px) {
+    main {
+        max-width: 1380px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    #header-title h1 {
+        font-size: 70px;
+    }
+    .box-left {
+        float: left;
+        width: 70%;
+    }
+    .box-right {
+        float: right;
+        width: 30%;
+        
+    }
+    .box-bottom {
+        float: left;
+        width: 70%;
+    }
+
     #btn-dropdown, #ul-dropdown {
         display: none;
     }
@@ -97,41 +138,4 @@
         border-radius: 3px;
         color: grey;
     }
-
-
- /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (max-width:1024px) {
-    .header, .table {
-        width: 50%;
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .socmed {
-        text-align: center;
-    }
-    .socmed ul {
-        display: flex;
-        justify-content: center;
-    }
 }
-@media (min-width:1024px) {
-    .box-left {
-        float: left;
-        width: 75%;
-    }
-    .box-right {
-        float: right;
-        width: 25%;
-    }
-    .box-bottom {
-        float: left;
-        width: 75%;
-    }
- /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) {
-    #header-title h1 {
-        font-size: 70px;
-    }
- /* hi-res laptops and desktops */ }
