@@ -25,12 +25,12 @@
         max-width: 903px;
         margin: 0 auto;
     }
-    .header, .table {
-        /* width: 50%; */
-        text-align: center;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    /* .header, .table {
+        width: 70%;
+    } */
+    table {
+        width: 70%;
+        margin: 0 auto;
     }
     .socmed {
         text-align: center;

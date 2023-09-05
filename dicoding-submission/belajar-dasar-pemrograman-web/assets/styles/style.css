@@ -90,8 +90,6 @@ main p {
 .header, .table, .desc, .socmed {
     text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .contentimg {
     width: 100%;
@@ -112,10 +110,10 @@ main p {
     float: left;
     padding: 5px 5px 0 0;
 }
-#form h2 {
+.box-bottom h2 {
     margin-bottom: 10px;
 }
-#form input, #form textarea {
+.box-bottom input, .box-bottom textarea {
     margin-bottom: 15px;
 }
 .range {
