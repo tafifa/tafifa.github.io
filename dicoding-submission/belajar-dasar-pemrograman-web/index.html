@@ -12,6 +12,21 @@
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous">
         </script>
+        <script>
+            function SubForm (){
+                $.ajax({
+                    url:"https://api.apispreadsheets.com/data/5P5Q2vJCNHi9bYyZ/",
+                    type:"post",
+                    data:$("#myForm").serializeArray(),
+                    success: function(){
+                        alert("Form Data Submitted :)")
+                    },
+                    error: function(){
+                        alert("There was an error :(")
+                    }
+                });
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -234,19 +249,5 @@
                 x.style.display = "none";
             }
         }
-
-        function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/5P5Q2vJCNHi9bYyZ/",
-				type:"post",
-				data:$("#myForm").serializeArray(),
-				success: function(){
-					alert("Form Data Submitted :)")
-				},
-				error: function(){
-					alert("There was an error :(")
-				}
-			});
-		}
     </script>
 </html>
