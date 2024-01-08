@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>Yuk Masuk Informatika! | Submission Dicoding - Belajar Dasar Pemrograman Dasar Web</title>
+        <link rel="stylesheet" href="assets/styles/style.css">
+        <link rel="stylesheet" href="assets/styles/responsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+        </script>
+        <script>
+            function SubForm (){
+                $.ajax({
+                    url:"https://api.apispreadsheets.com/data/5P5Q2vJCNHi9bYyZ/",
+                    type:"post",
+                    data:$("#myForm").serializeArray(),
+                    success: function(){
+                        alert("Form Data Submitted :)")
+                    },
+                    error: function(){
+                        alert("There was an error :(")
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="header-title">
+                <h1>Yuk Masuk <br>Informatika!</h1>
+                <p>by <em>Tafif Assiddiqi</em><span>&#10024;</span> @ <a href="https://tafifa.github.io">tafifa.github.io</a>   </p>
+            </div>
+            <nav>
+                <div class="nav-container">
+                    <button type="button" name="button" id="btn-dropdown"  onclick="dropdown()"><span class="fa-solid fa-bars"></span> Menu</button>
+                    <ul id="ul-normal">
+                        <li> <a href="#content-01">Apa itu Program Studi Informatika</a> </li>
+                        <li> <a href="#content-02">Apa yang dipelajari di informatika</a> </li>
+                        <li> <a href="#content-03">Pekerjaan lulusan Informatika</a> </li>
+                        <li> <a href="#content-04">Kesimpulan</a> </li>
+                    </ul>
+                    <ul id="ul-dropdown">
+                        <h2>Daftar Isi</h2>
+                        <li> <a href="#content-01">Apa itu Program Studi Informatika</a> </li>
+                        <li> <a href="#content-02">Apa yang dipelajari di informatika</a> </li>
+                        <li> <a href="#content-03">Pekerjaan lulusan Informatika</a> </li>
+                        <li> <a href="#content-04">Kesimpulan</a> </li>
+                        <li> <a href="#profile">Profil</a> </li>
+                        <li> <a href="#comment">Comment</a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <article class="box-left">
+                <div id="container">
+                    <div id="content-00" class="content">
+
+                        <h2>Abstrak</h2>
+                        <p>Informatika telah menjadi sorotan dalam satu dekade terakhir, memunculkan ketertarikan besar di kalangan mahasiswa dan calon profesional. Dalam era yang semakin didominasi oleh teknologi dan informasi, Jurusan Informatika telah berkembang menjadi salah satu jurusan paling diminati, bersaing ketat dengan jurusan lain seperti kedokteran dan kesehatan. Keberhasilan ini tidak lepas dari kenyataan bahwa dunia saat ini sangat bergantung pada teknologi dan semakin pesatnya perkembangan teknologi informasi.</p>
+
+                        <p>Mengapa Informatika menjadi begitu populer? Jawabannya sederhana: kebutuhan akan tenaga kerja di bidang IT semakin meningkat. Pada kuartal pertama tahun 2022 (Januari-Maret), melansir dari blog 
+                        <a href="https://www.linkedin.com/business/talent/blog/talent-strategy/most-in-demand-jobs">Linkedin.com</a>
+                        , ditemukan fakta menarik bahwa dari 10 pekerjaan dengan tingkat kebutuhan tertinggi di dunia, setengah dari daftar tersebut adalah pekerjaan yang berhubungan dengan IT. Ini termasuk posisi seperti Software Engineer, JavaScript Developer, Java Software Engineer, DevOps Engineer, dan Full-Stack Engineer.</p>
+
+                        <p>Ketertarikan besar ini tidak hanya didorong oleh permintaan pasar yang tinggi, tetapi juga oleh peluang karir yang tak terbatas di dunia Informatika. Jurusan ini membuka pintu menuju berbagai bidang, termasuk pengembangan perangkat lunak, keamanan siber, analisis data, kecerdasan buatan (AI), dan banyak lagi.</p>
+
+                        <p>Mari kita eksplorasi bersama dunia yang tak terbatas dalam teknologi informasi dan lihat bagaimana Anda dapat menjadi bagian dari masa depan yang terus berkembang ini. Yuk, mari masuk ke dunia Informatika!</p>
+
+                    </div>
+                    <div id="content-01" class="content">
+
+                        <h2>Apa itu Jurusan Informatika?</h2>
+                        <img src="assets/images/article-image00.jpg" alt="" class="img -01 contentimg">
+
+                        <p>Jurusan Informatika adalah salah satu cabang ilmu di bidang teknologi informasi yang mempelajari pengolahan data, pengembangan perangkat lunak, komputasi, dan segala hal yang berkaitan dengan komputer dan sistem informasi. Jurusan ini mempersiapkan mahasiswa untuk menjadi ahli dalam memecahkan masalah dengan menggunakan teknologi informasi, serta mengembangkan dan mengelola sistem informasi yang efisien.</p>
+
+                        <p>Sejarah Jurusan Informatika dapat ditelusuri ke awal perkembangan komputer. Pada awalnya, komputer digunakan untuk menghitung data statistik dan pekerjaan matematika lainnya. Namun, dengan makin kompleksnya tuntutan teknologi, muncullah kebutuhan akan ilmuwan komputer yang terlatih untuk mengembangkan perangkat keras dan perangkat lunak yang lebih canggih. Perkembangan komputer selama Perang Dunia II memberikan dorongan besar untuk pengembangan ilmu komputer. Saat itulah komputer pertama kali digunakan dalam konteks yang mirip dengan yang kita kenal saat ini. Dan sejak itu, Jurusan Informatika mulai berkembang sebagai cabang ilmu tersendiri di perguruan tinggi.</p>
+
+                        <p>Terdapat beberapa alasan mengapa memilih Jurusan Informatika dapat menjadi pilihan yang sangat baik. Pertama, jurusan ini menawarkan peminatan yang sangat luas, memungkinkan mahasiswa untuk memilih spesialisasi sesuai dengan minat mereka, mulai dari pengembangan perangkat lunak hingga keamanan siber. Selain itu, peluang karir yang luas juga menjadi daya tarik utama. Semakin berkembangnya teknologi informasi membuat permintaan akan profesional IT terus meningkat, memberikan lulusan Informatika akses ke berbagai industri dengan gaji yang kompetitif. </p>
+
+                        <p>Selain itu, memilih Jurusan Informatika memberikan kesempatan untuk berkontribusi pada kemajuan teknologi. Lulusan Jurusan Informatika dapat menciptakan perangkat lunak, aplikasi, dan solusi inovatif yang dapat mengubah dunia. Selain itu, jurusan ini melatih keterampilan pemecahan masalah yang sangat berharga, memungkinkan mahasiswa untuk memecahkan masalah kompleks dengan pendekatan logis dan kreatif. Dengan memilih Jurusan Informatika, seseorang dapat memasuki dunia yang semakin terhubung dan tergantung pada teknologi informasi, dan menjadi bagian dari perubahan yang terus berlanjut di era digital ini.</p>
+
+                        <p>Berikut kampus yang ada Jurusan Informatika nya (<em>urutan tidak menyatakan kualitas kampusnya</em>)</p>
+                        <ol>
+                            <li>Institut Teknologi Bandung (Teknik Informatika - STEI)</li>
+                            <li>Universitas Gadjah Mada (Ilmu Komputer)</li>
+                            <li>Universitas Indonesia (Ilmu Komputer)</li>
+                            <li>Institut Teknologi Sepuluh Nopember (Teknik Informatika)</li>
+                            <li>Bina Nusantara University (Teknik Informatika)</li>
+                            <li>Telkom University (Informatika)</li>
+                            <li>Universitas Gunadarma (Teknik Informatika)</li>
+                            <li>Universitas Hasanudin (Teknik Informatika)</li>
+                            <li>Universitas Negeri Sebelas Maret (Informatika)</li>
+                            <li>Universitas Tanjungpura (Informatika)</li>
+                        </ol>
+
+                    </div>
+                    <div id="content-02" class="content">
+
+                        <h2>Apa yang dipelajari di Informatika?</h2>
+                        <img src="assets/images/article-image01.jpg" alt="" class="img -02 contentimg">
+
+                        <p>Jurusan Informatika merupakan program studi yang memberikan pemahaman mendalam tentang teknologi informasi. Di dalamnya, mahasiswa mempelajari hal-hal berikut:</p>
+
+                        <ol>
+                            <li>Pemrograman</li>
+                            <li>Algoritma dan Struktur Data</li>
+                            <li>Sistem Operasi</li>
+                            <li>Rekayasa Perangkat Lunak</li>
+                            <li>Jaringan Komputer</li>
+                            <li>Sistem Informasi</li>
+                            <li>Kecerdasan Buatan (AI)</li>
+                            <li>Sistem Tertanam (Embedded System)</li>
+                            <li>Basis Data</li>
+                            <li>Keamanan Siber</li>
+                        </ol>
+
+                    </div>
+                    <div id="content-03" class="content">
+
+                        <h2>Pekerjaan lulusan Informatika</h2>
+                        <img src="assets/images/article-image02.jpg" alt="" class="img -03 contentimg">
+
+                        <p>Lulusan Jurusan Informatika memiliki akses ke berbagai peluang karir di dunia teknologi informasi dan lebih banyak lagi. Berikut adalah beberapa pekerjaan yang dapat diambil oleh mereka:</p>
+
+                        <p>Berikut pekerjaan lulusan Informatika nya</p>
+                        <ol>
+                            <li>Software Engineer</li>
+                            <li>System Analyst</li>
+                            <li>Data Scientist</li>
+                            <li>Game Developer</li>
+                            <li>IT Konsultan</li>
+                            <li>Cybersecurity</li>
+                            <li>Network Security</li>
+                        </ol>
+
+                    </div>
+                    <div id="content-04" class="content">
+
+                        <h2>Kesimpulan</h2>
+                        <p>Tiba saatnya bagi para calon mahasiswa tahun 2023 untuk merencanakan masa depan mereka dengan bijak. Memilih jurusan yang tepat adalah langkah penting dalam perjalanan akademik Anda. Jurusan Informatika adalah salah satu opsi yang menarik dengan peluang karir yang luas, namun juga persaingan yang ketat. Keputusan ini dapat menjadi motivasi untuk terus mengembangkan diri dan berusaha keras mencapai tujuan. Bagi yang telah berhasil mendapatkan kursi di perguruan tinggi impian, selamat! Perjalanan panjang menuju kesuksesan akademik telah dimulai, dan persiapkan diri untuk menghadapi berbagai tantangan yang akan datang selama masa perkuliahan. Tetap semangat dan fokus untuk mencapai impian dan tujuan akademik Anda.</p>
+
+                    </div>
+                </div>
+            </article>
+            <aside class="box-right" id="profile">
+                <div id="container">
+                    <div id="aside-title">
+                        <h2>Author Profile</h2>
+                    </div>
+                    <article id="aside-profile">
+                        <section class="profile header">
+                            <p>Seorang yang tertarik dengan teknologi</p>
+                            <figure>
+                                <img src="assets/images/profile.jpg" alt="profile.jpg" class="img -04 profileimg">
+                            </figure>
+                        </section>
+                        <section class="profile table">
+                            <table>
+                                <tr>
+                                    <th>Nama</th>
+                                    <td> : </td>
+                                    <td>Muhammad Tafif Qairawan Assiddiqi</td>
+                                </tr>
+                                <tr>
+                                    <th>Tanggal Lahir</th>
+                                    <td> : </td>
+                                    <td>9 Oktober 2003</td>
+                                </tr>
+                                <tr>
+                                    <th>Tempat Tinggal</th>
+                                    <td> : </td>
+                                    <td>Pontianak, Kalimantan Barat</td>
+                                </tr>
+                                <tr>
+                                    <th>Hobi</th>
+                                    <td> : </td>
+                                    <td>Bermain Rubik, Ngoding</td>
+                                </tr>
+                            </table>
+                        </section>
+                        <section class="profile desc">
+                            <p>Haloo… Aku Tafif, mahasiswa yang sedang menempuh pendidikan S1 Informatika di Universitas Tanjungpura, Pontianak angkatan 2021. <br> Sedari kecil aku tertarik menjadi engineer dan scientist, namun takdir memilih untuk menjadi programmer, hehehe, tidak apalah ya setidaknya masih menarik juga bagiku. Salam kenal pengunjung website ini, bisa cek social media-ku dibawah ya…</p>
+                        </section>
+                        <section class="profile socmed">
+                            <p>Follow my Social Media!</p>
+                            <ul>
+                                <li><a href="https://instagram.com/tafif_a/"><span class="fa fa-brands fa-instagram"></span> <span class="item-label">Instagram</span></a></li>
+                                <li><a href="https://twitter.com/tafif_a/"><span class="fa fa-brands fa-twitter"></span> <span class="item-label">Twitter</span></a></li>
+                                <li><a href="https://youtube.com/channel/UC88FivgRkMvHQVG7RfXYy_w"><span class="fa fa-brands fa-youtube"></span> <span class="item-label">Youtube</span></a></li>
+                                <li><a href="https://github.com/tafifa/"><span class="fa fa-brands fa-github"></span> <span class="item-label">Github</span></a></li>
+                                <li><a href="https://linkedin.com/in/tafifa/"><span class="fa fa-brands fa-linkedin"></span> <span class="item-label">Linkedin</span></a></li>
+                            </ul>
+                            <div class="clear"></div>
+                        </section>
+                    </article>
+                </div>
+            </aside>
+
+            <div class="box-bottom">
+                <div id="container">
+                    <h2>Leave me comment and rating below!</h2>
+                    <form id="myForm">
+                        <label for="name">Name : </label>
+                        <input id="name" type="text" name="name" value="" placeholder="Isi namamu disini!" required>
+
+                        <label for="comment">Comment : </label>
+                        <textarea id="comment" name="comment" rows="8" cols="80" value="" placeholder="Isi komentarmu disini!" required></textarea>
+
+                        <div class="range">
+                            <label for="range">Rate my website : </label>
+                            <input type="range" name="star" id="star" min="0" max="5" onchange="getRangeValue(this.value);">
+                            <p> <span id="rangeValue">-</span></p>
+                        </div>
+
+                        <button type="button" name="button" class="btn-submit" onclick='SubForm()'>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <div class="clear"></div>
+        <footer>
+            <p>Belajar Dasar Pemrograman Web &#169; 2022, Dicoding Academy</p>
+        </footer>
+    </body>
+    <!-- script -->
+    <script type="text/javascript">
+        var valueRange = document.getElementById("rangeValue");
+
+        function getRangeValue(val) {
+            valueRange.innerHTML = val;
+        }
+
+        var submitForm = document.getElementsByClassName("btn-submit")[0];
+        submitForm.addEventListener("click", function (event) {
+            alert("Terima kasih atas komentarnya!")
+        })
+
+        function dropdown() {
+            var x = document.getElementById("ul-dropdown");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</html>

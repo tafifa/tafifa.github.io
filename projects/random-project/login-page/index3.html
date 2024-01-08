@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Login Webpage</title>
+        <link rel="stylesheet" href="assets/styles/stylesheet.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>Forgot Account Page</h1>
+            </div>
+            <div id="username" onload="forgotUn()">
+                <p>Username </p>
+                <input type="text" id="un" name="uname" value="" required>
+                <br>
+                <button type="button" name="forgotUsernameButton" id="fUsername" onclick="forgotPw()">Insert Password Instead</button>
+            </div>
+            <div id="password" class="hide">
+                <p>Password </p>
+                <input type="text" id="pw" name="pword" value="" required>
+                <br>
+                <button type="button" name="forgotPasswordButton" id="fPassword" onclick="forgotUn()">Insert Username Instead</button>
+            </div>
+            <script>
+                function forgotUn() {
+                    const uname = document.getElementById('username');
+                    const pword = document.getElementById('password');
+                    uname.style.display = "block";
+                    pword.style.display = "none";
+                }
+                function forgotPw() {
+                    const uname = document.getElementById('username');
+                    const pword = document.getElementById('password');
+                    uname.style.display = "none";
+                    pword.style.display = "block";
+                }
+            </script>
+            <button type="submit" name="s-btn" class="btn">Submit</button>
+        </div>
+    </body>
+</html>
