@@ -1,0 +1,55 @@
+@media (max-width:422px) {
+  .search-bar br {
+    display: block;
+  }
+  .search-bar button, #search-bar, .form-input button {
+    width: 100%;
+  }
+}
+@media (max-width:709px) {
+    #dummy {
+        display: none;
+    }
+  }
+@media (max-width:1024px) {
+    header, main {
+        max-width: 700px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #container-book {
+        padding-left: 30px;
+    }
+    header {
+      height: auto;
+      padding-bottom: 15px;
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
+    }
+}
+@media (min-width:1024px) {
+    .box-left {
+        width: 65%;
+        float: left;
+    }
+    .box-right {
+        width: 35%;
+        float: left;
+    }
+    header, main{
+        max-width: 1280px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #container-book {
+        padding-left: 15px;
+    }
+    header {
+        height: auto;
+        padding-bottom: 15px;
+    }
+    header p {
+        text-indent: 30px;
+    }
+}

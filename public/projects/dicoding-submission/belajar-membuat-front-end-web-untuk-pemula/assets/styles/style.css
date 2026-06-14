@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,500&display=swap');
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div, article, aside, section, header, main {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #FFD154;
+  color: #3d3d3d;
+}
+body, button {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* This is styles for main*/
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+main {
+  background-color: #FFEEBF;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+h2, h3 {
+  margin-bottom: 10px;
+}
+span {
+  color: grey;
+}
+button, input {
+  border: none;
+}
+button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.container {
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* form input */
+.text-based-form input {
+  display: block;
+  width: 90%;
+  padding: 10px 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border-style: none;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), #cccccc, #cccccc);
+}
+.form-input button {
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+/* form search */
+.form-search input, .form-search button {
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+}
+.form-search button {
+  margin-top: 10px;
+  color: white;
+  background-color: green;
+}
+#search-bar {
+  width: 50%;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), #cccccc, #cccccc);
+}
+.search-bar {
+  margin: 10px 0;
+}
+.result {
+  display: flex;
+  flex-wrap: wrap;
+}
+.resultSearch {
+  flex: 49%;
+  margin: 3px;
+}
+#dummy {
+  background-color: white;
+}
+#resultBook-container {
+  margin: 5px;
+  padding-left: 20px;
+}
+
+/* book shelf */
+#container-book {
+  background-color: #D9D9D9;
+  margin-bottom: 15px;
+  padding: 15px 0;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 2px 3px 4px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 2px 3px 4px 0px rgba(0,0,0,0.25);
+  box-shadow: 2px 3px 4px 0px rgba(0,0,0,0.25);
+}
+.btn1 {
+  background-color: #FFD154;
+}
+.btn2 {
+  background-color: #8f6a04;
+}
+.btn3 {
+  background-color: red;
+}
+.btn1, .btn2, .btn3 {
+  padding: 5px;
+  margin-top: 5px;
+  color: white;
+  border-radius: 5px;
+}
+.btn1:active, .btn2:hover, .btn3:hover {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#swap:hover, #delete:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.box-right h2 {
+  float: left;
+}
+#reset {
+  float: right;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+.shelf-container h4 {
+  margin-bottom: 5px;
+}
+.shelf-container p {
+  font-size: 14px;
+  text-indent: 10px;
+}
+.box-right p {
+  margin-bottom: 5px;
+}
+.shelf-container {
+  margin: 15px 0;
+  padding: 10px 0;
+  border-top: dotted;
+  border-bottom: dotted;
+}
+
+/* This is styles for footer */
+footer {
+  background-color: #344D57;
+  background-size: 100%;
+  width: 100%;
+  height: auto;
+}
+footer p {
+  color: white;
+  text-align: center;
+  padding: 15px 0 15px 0;
+}
+.clear {
+  clear: left;
+}

@@ -1,0 +1,136 @@
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div, article, header {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: 50%;
+  margin: 20px auto;
+  padding: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+/* Home */
+.home-page {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-desc {
+  margin: 0 20px;
+  text-align: justify;
+}
+
+.profile-desc h2,
+.profile-desc p {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+/* Hobby */
+.hobby-page h2, .hobby-page h3 {
+  text-align: center;
+}
+
+.hobby-page p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.wrap-container {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container-hobby {
+  flex: 0 45%; 
+  margin-bottom: 20px; 
+  padding: 10px; 
+  background-color: #bebebe32;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-hobby img {
+  width: 100%;
+  height: 175px;
+}
+
+/* Contact */
+.contact-page form {
+  margin: 20px 0;
+}
+
+.contact-page input[type="text"],
+.contact-page input[type="radio"],
+.contact-page input[type="checkbox"] {
+  margin-bottom: 10px;
+  float: left;
+}
+
+.contact-page input[type="text"] {
+  width: 90%;
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+.contact-page input[type="checkbox"],
+.contact-page input[type="radio"] {
+  margin-right: 5px;
+}
+
+.contact-page label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-page input[type="submit"] {
+  float: right;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-page input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.contact-page fieldset {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-page legend {
+  font-weight: bold;
+}
+
+.contact-page input,
+.contact-page label {
+  margin-bottom: 10px;
+}
