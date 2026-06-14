@@ -1,0 +1,203 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Portfolio | Tafif Assiddiqi">
+  <!-- Hero Section -->
+  <section
+    class="bsb-hero-1 px-3 bsb-overlay bsb-hover-pull"
+    style="background-image: url('/assets/img/hero/hero-home1.jpg');"
+  >
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div
+          class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6 text-center text-white"
+        >
+          <h1 class="display-3 fw-bold mb-3 animate-fade-down">My Portfolio</h1>
+          <p class="lead mb-0 animate-fade-up">
+            A collection of my projects, experiments, and collaborative works.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="py-5 py-md-8 py-xl-10">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          <p class="text-secondary mb-5 text-center lead fs-4">
+            Showcasing individual projects and collaborative efforts from
+            various domains including Web Development and AI.
+          </p>
+          <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Buttons (Optional - keeping simplified for now, filtering relies on legacy JS) -->
+    <!-- Note: If the legacy JS 'project-1.js' expects specific classes for filtering, they are preserved below -->
+
+    <div class="container overflow-hidden">
+      <div class="row gy-3 gy-md-2 bsb-project-1-grid">
+        <!-- Project Item 1 -->
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure
+            class="rounded rounded-4 overflow-hidden bsb-overlay-hover shadow-sm"
+          >
+            <a
+              href="/legacy/projects/dicoding-submission/belajar-dasar-pemrograman-web/index.html"
+            >
+              <img
+                class="img-fluid bsb-scale-up bsb-hover-scale"
+                loading="lazy"
+                src="/assets/img/project/project-img-10.jpg"
+                alt="Web Programming Basics"
+              />
+            </a>
+            <figcaption>
+              <h5 class="text-white bsb-hover-fadeInLeft">
+                Web Programming Basics
+              </h5>
+              <div class="text-white bsb-hover-fadeInRight">
+                Submission Dicoding
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Project Item 2 -->
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure
+            class="rounded rounded-4 overflow-hidden bsb-overlay-hover shadow-sm"
+          >
+            <a
+              href="/legacy/projects/dicoding-submission/belajar-membuat-front-end-web-untuk-pemula/index.html"
+            >
+              <img
+                class="img-fluid bsb-scale-up bsb-hover-scale"
+                loading="lazy"
+                src="/assets/img/project/project-img-11.jpg"
+                alt="Front-End Beginner"
+              />
+            </a>
+            <figcaption>
+              <h5 class="text-white bsb-hover-fadeInLeft">
+                Front-End for Beginners
+              </h5>
+              <div class="text-white bsb-hover-fadeInRight">
+                Submission Dicoding
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Project Item 3 -->
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure
+            class="rounded rounded-4 overflow-hidden bsb-overlay-hover shadow-sm"
+          >
+            <a
+              href="/legacy/projects/random-project/GDSC-Web/project1-aboutme/home.html"
+            >
+              <img
+                class="img-fluid bsb-scale-up bsb-hover-scale"
+                loading="lazy"
+                src="/assets/img/project/project-img-12.jpg"
+                alt="GDSC Project"
+              />
+            </a>
+            <figcaption>
+              <h5 class="text-white bsb-hover-fadeInLeft">Project About Me</h5>
+              <div class="text-white bsb-hover-fadeInRight">
+                GDSC UNTAN Web Programming
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Project Item 4 -->
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure
+            class="rounded rounded-4 overflow-hidden bsb-overlay-hover shadow-sm"
+          >
+            <a href="https://artventureindonesia.github.io/" target="_blank">
+              <img
+                class="img-fluid bsb-scale-up bsb-hover-scale"
+                loading="lazy"
+                src="/assets/img/project/project-img-13.jpg"
+                alt="Artventure"
+              />
+            </a>
+            <figcaption>
+              <h5 class="text-white bsb-hover-fadeInLeft">
+                Artventure Indonesia
+              </h5>
+              <div class="text-white bsb-hover-fadeInRight">
+                Bangkit Capstone Project
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Project Item 5 -->
+        <div class="col-12 col-md-6 col-lg-3 bsb-project-1-item">
+          <figure
+            class="rounded rounded-4 overflow-hidden bsb-overlay-hover shadow-sm"
+          >
+            <a
+              href="https://tomatoripenesss.pythonanywhere.com/"
+              target="_blank"
+            >
+              <img
+                class="img-fluid bsb-scale-up bsb-hover-scale"
+                loading="lazy"
+                src="/assets/img/project/project-img-14.jpg"
+                alt="Tomato Ripeness"
+              />
+            </a>
+            <figcaption>
+              <h5 class="text-white bsb-hover-fadeInLeft">Tomato Ripeness</h5>
+              <div class="text-white bsb-hover-fadeInRight">
+                College Submission
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .animate-fade-down {
+    animation: fadeDown 0.8s ease-out forwards;
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
